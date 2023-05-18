@@ -1,13 +1,13 @@
 import React from "react";
 import {Parallax} from"react-parallax";
-import image1 from  "../imges/1.png";
-import image2 from  "../imges/2.png";
-import image3 from  "../imges/3.png";
-import image4 from  "../imges/4.png";
-import image5 from  "../imges/5.png";
-import image6 from  "../imges/6.png";
-import image7 from  "../imges/7.png";
-import image8 from  "../imges/8.png";
+import image1 from  "../img/1.png";
+import image2 from  "../img/2.png";
+import image3 from  "../img/3.png";
+import image4 from  "../img/4.png";
+import image5 from  "../img/5.png";
+import image6 from  "../img/6.png";
+import image7 from  "../img/7.png";
+import image8 from  "../img/8.png";
 import "./moduleParallax.css";
 
 const insideStyle ={
