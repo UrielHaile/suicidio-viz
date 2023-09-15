@@ -22,6 +22,7 @@ const insideStyle ={
 export  const ModuleParallax = () => {
 return(
     <div>
+        
        <Parallax bgImage={image1} strength ={200}>
         <div style={{ height: "100vh"}}>
         </div>
