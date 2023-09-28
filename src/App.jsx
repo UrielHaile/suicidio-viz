@@ -1,20 +1,30 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import useIntersection from './logic/useIntersection.jsx'
+
+/* Estilos */
 import './App.css'
 
 /* Imagenes */
 import sujetoPrincipalTop from './img/sujetoPrincipalTop.png'
 import sujetoPrincipalBottom from './img/sujetoPrincipalBottom.png'
-import bala from './img/bala.png'
+/* import bala from './img/bala.png' */
 import cuerda from './img/cuerda.png'
-import pildoras from './img/pildoras.png'
+/* import pildoras from './img/pildoras.png' */
 
 export default function App() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
+
+    const [elemento1, isIntersecting] = useIntersection({
+        root: null,
+        treshold: 1.0,
+        rootmargin: '0px',
+    })
+
     return (
         <div className='App'>
             <Parallax pages={20} style={{ top: '0', left: '0' }}>
                 {/* ALBERT CAMUS ------------------------------------ */}
-                <ParallaxLayer className='blur-in' offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
+                <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
                     <h6>
                         Pero, ¿qué son cien millones de muertos? Cuando se ha hecho la guerra apenas sabe ya nadie lo que es un muerto. Y además un hombre muerto solamente tiene peso cuando le ha visto uno muerto; cien millones de cadáveres son más que humo en la imaginación.
                         <br />
@@ -23,12 +33,12 @@ export default function App() {
                     </h6>
                 </ParallaxLayer>
                 {/* ESTADÍSTICA ------------------------------------- */}
-                <ParallaxLayer offset={1} speed={0.5} sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'center' }} id="">
+                <ParallaxLayer offset={1} speed={0.5} sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'center' }}>
                     <h1>
                         493
                     </h1>
                 </ParallaxLayer>
-                <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }} style={{ ...alignCenter, justifyContent: 'center', paddingTop: '10%' }} id="">
+                <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }} style={{ ...alignCenter, justifyContent: 'center', paddingTop: '10%' }}>
                     <h2>
                         Suicidios
                     </h2>
@@ -46,7 +56,6 @@ export default function App() {
                 <ParallaxLayer offset={6} sticky={{ start: 6, end: 7 }} style={{ display: 'block', textAlign: 'left', marginLeft: '50%', width: '45%', paddingTop: '10%' }}>
                     <h6 className='blur-in'>
                         ¿En qué situación habrá estado la compañera para tomar tal decisión?
-
                     </h6>
                     <h6>
                         ¿La universidad puede aportar algo positivo para la prevención de este tipo de circunstancias?
