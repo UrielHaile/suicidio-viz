@@ -1,12 +1,8 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { useState, useRef, useEffect } from 'react'
 
 import useIntersection from './logic/useIntersection.jsx'
 import Estadisticas from './components/estadisticas.jsx'
-
-/* Estilos */
-import useIntersection from './logic/useIntersection.jsx'
 
 /* Estilos */
 import './App.css'
