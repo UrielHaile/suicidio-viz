@@ -1,6 +1,9 @@
 :root {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  /* color: rgba(255, 255, 255, 0.87);
   background: #000000;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 58%, rgba(36, 36, 36, 1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 58%, rgba(36, 36, 36, 1) 100%);*/
+  background-image: url("./img/FondoHoja.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

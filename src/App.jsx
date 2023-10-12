@@ -1,29 +1,41 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-<<<<<<< Updated upstream
-=======
 import { useState, useRef, useEffect } from 'react'
+
 import useIntersection from './logic/useIntersection.jsx'
 import Estadisticas from './components/estadisticas.jsx'
 
 /* Estilos */
->>>>>>> Stashed changes
+import useIntersection from './logic/useIntersection.jsx'
+
+/* Estilos */
 import './App.css'
 
 /* Imagenes */
 import sujetoPrincipalTop from './img/sujetoPrincipalTop.png'
 import sujetoPrincipalBottom from './img/sujetoPrincipalBottom.png'
-import bala from './img/bala.png'
+/* import bala from './img/bala.png' */
 import cuerda from './img/cuerda.png'
-import pildoras from './img/pildoras.png'
+import CuerdaExt from './img/CuerdaExt.png'
+import CuerdaExt1 from './img/CuerdaExt1.png'
+/* import pildoras from './img/pildoras.png' */
 
 export default function App() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
+
+    const [elemento1, isIntersecting] = useIntersection({
+        root: null,
+        threshold: 0.5,
+        rootmargin: '-200px'
+    })
+    const [elemento2, isIntersecting2] = useIntersection({
+        root: null,
+        threshold: 0.5,
+        rootmargin: '-200px'
+    })
+
     return (
         <div className='App'>
-<<<<<<< Updated upstream
-            <Parallax pages={20} style={{ top: '0', left: '0' }}>
-=======
             <Parallax pages={25} style={{ top: '0', left: '0' }}>
                 {/* EXTENSIÓN CUERDA ------------------------- */}
                 <div>
@@ -43,23 +55,25 @@ export default function App() {
                         <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '22%' }} />
                     </ParallaxLayer>
                 </div>
->>>>>>> Stashed changes
                 {/* ALBERT CAMUS ------------------------------------ */}
-                <ParallaxLayer className='blur-in' offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
-                    <h6>
-                        Pero, ¿qué son cien millones de muertos? Cuando se ha hecho la guerra apenas sabe ya nadie lo que es un muerto. Y además un hombre muerto solamente tiene peso cuando le ha visto uno muerto; cien millones de cadáveres son más que humo en la imaginación.
-                        <br />
-                        <br />
-                        <strong>Albert Camus</strong>
-                    </h6>
+                <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
+                    <div ref={elemento1} className={isIntersecting ? 'blur-in' : 'blur-out'}>
+                        <h6>
+                            Pero, ¿qué son cien millones de muertos? Cuando se ha hecho la guerra apenas sabe ya nadie lo que es un muerto. Y además un hombre muerto solamente tiene peso cuando le ha visto uno muerto; cien millones de cadáveres son más que humo en la imaginación.
+                            <br />
+                            <br />
+                            <strong>Albert Camus</strong>
+                        </h6>
+                    </div>
+
                 </ParallaxLayer>
                 {/* ESTADÍSTICA ------------------------------------- */}
-                <ParallaxLayer offset={1} speed={0.5} sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'center' }} id="">
+                <ParallaxLayer offset={1} speed={0.5} sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'center' }}>
                     <h1>
                         493
                     </h1>
                 </ParallaxLayer>
-                <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }} style={{ ...alignCenter, justifyContent: 'center', paddingTop: '10%' }} id="">
+                <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }} style={{ ...alignCenter, justifyContent: 'center', paddingTop: '10%' }}>
                     <h2>
                         Suicidios
                     </h2>
@@ -68,7 +82,7 @@ export default function App() {
                 <ParallaxLayer offset={4} sticky={{ start: 5, end: 7 }} style={{ display: 'flex', marginRight: '50%', marginLeft: '15%', width: '45%' }} id="">
                     <img src={cuerda} alt='Cuerda' />
                 </ParallaxLayer>
-                <ParallaxLayer offset={5} sticky={{ start: 5, end: 5 }} style={{ display: 'flex', textAlign: 'left', marginLeft: '50%', width: '45%', paddingTop: '10%' }} id="">
+                <ParallaxLayer offset={4} sticky={{ start: 4, end: 5 }} style={{ display: 'flex', textAlign: 'left', marginLeft: '50%', width: '45%', paddingTop: '10%' }}>
                     <p>
                         Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los pasillos de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la información y los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la directora de manera oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó silencioso, gris y sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el tema. Y no de la víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron en la mente de mis compañeros:
                     </p>
@@ -77,7 +91,6 @@ export default function App() {
                 <ParallaxLayer offset={6} sticky={{ start: 6, end: 7 }} style={{ display: 'block', textAlign: 'left', marginLeft: '50%', width: '45%', paddingTop: '10%' }}>
                     <h6 className='blur-in'>
                         ¿En qué situación habrá estado la compañera para tomar tal decisión?
-
                     </h6>
                     <h6>
                         ¿La universidad puede aportar algo positivo para la prevención de este tipo de circunstancias?
@@ -106,7 +119,7 @@ export default function App() {
                 {/* DATOS ----------------------------------------- */}
                 <ParallaxLayer offset={10} sticky={{ start: 10, end: 11 }} speed={0.5} style={{ display: 'flex', justifyContent: 'flex-end' }} id="datos">
                     <div style={{ textAlign: 'justify', width: '25%', marginRight: '8%' }}>
-                        <h3>
+                        <h3 ref={elemento2} className={isIntersecting ? 'blur-in' : 'blur-out'}>
                             Medio
                         </h3>
                         <p>
