@@ -1,4 +1,13 @@
+import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+<<<<<<< Updated upstream
+=======
+import { useState, useRef, useEffect } from 'react'
+import useIntersection from './logic/useIntersection.jsx'
+import Estadisticas from './components/estadisticas.jsx'
+
+/* Estilos */
+>>>>>>> Stashed changes
 import './App.css'
 
 /* Imagenes */
@@ -12,7 +21,29 @@ export default function App() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
     return (
         <div className='App'>
+<<<<<<< Updated upstream
             <Parallax pages={20} style={{ top: '0', left: '0' }}>
+=======
+            <Parallax pages={25} style={{ top: '0', left: '0' }}>
+                {/* EXTENSIÓN CUERDA ------------------------- */}
+                <div>
+                    <ParallaxLayer offset={0} speed={0.01}>
+                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '26%' }} />
+                    </ParallaxLayer>
+                    <ParallaxLayer offset={1} speed={0.01}>
+                        <img src={CuerdaExt1} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '25%' }} />
+                    </ParallaxLayer>
+                    <ParallaxLayer offset={2} speed={0.01}>
+                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '24%' }} />
+                    </ParallaxLayer>
+                    <ParallaxLayer offset={3} speed={0.01}>
+                        <img src={CuerdaExt1} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '23%' }} />
+                    </ParallaxLayer>
+                    <ParallaxLayer offset={4} speed={0.01}>
+                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '22%' }} />
+                    </ParallaxLayer>
+                </div>
+>>>>>>> Stashed changes
                 {/* ALBERT CAMUS ------------------------------------ */}
                 <ParallaxLayer className='blur-in' offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
                     <h6>
@@ -72,6 +103,7 @@ export default function App() {
                         <img src={sujetoPrincipalBottom} alt='Hombre Colgado' style={{ height: '100vh', zIndex: '-1' }} />
                     </center>
                 </ParallaxLayer>
+                {/* DATOS ----------------------------------------- */}
                 <ParallaxLayer offset={10} sticky={{ start: 10, end: 11 }} speed={0.5} style={{ display: 'flex', justifyContent: 'flex-end' }} id="datos">
                     <div style={{ textAlign: 'justify', width: '25%', marginRight: '8%' }}>
                         <h3>
@@ -133,7 +165,7 @@ export default function App() {
                     </div>
                 </ParallaxLayer>
                 {/* DATOS GENERALES DEL ESTADO --------------------- */}
-                <ParallaxLayer offset={16} sticky={{ start: 17, end: 20 }} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }} id="datosEstado">
+                <ParallaxLayer offset={16} sticky={{ start: 17, end: 19 }} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }} id="datosEstado">
                     <div>
                         <h6 style={{ color: 'white', fontSize: '4em', margin: '0%' }}>
                             Datos generales del estado
@@ -146,8 +178,10 @@ export default function App() {
 
                 </ParallaxLayer>
                 {/* MAPA	*/}
+                <ParallaxLayer offset={20} sticky={{ start: 20, end: 25 }} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
+                    <Estadisticas />
+                </ParallaxLayer>
             </Parallax>
-
         </div>
     )
 }
