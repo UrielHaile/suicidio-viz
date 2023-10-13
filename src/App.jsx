@@ -1,5 +1,6 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { motion } from "framer-motion"
 
 import useIntersection from './logic/useIntersection.jsx'
 import Estadisticas from './components/estadisticas.jsx'
@@ -18,6 +19,7 @@ import CuerdaExt1 from './img/CuerdaExt1.png'
 
 export default function App() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
+    const alignCuerda = { height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start' }
 
     const [elemento1, isIntersecting] = useIntersection({
         root: null,
@@ -36,23 +38,23 @@ export default function App() {
                 {/* EXTENSIÓN CUERDA ------------------------- */}
                 <div>
                     <ParallaxLayer offset={0} speed={0.01}>
-                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '26%' }} />
+                        <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: '26%' }} />
                     </ParallaxLayer>
                     <ParallaxLayer offset={1} speed={0.01}>
-                        <img src={CuerdaExt1} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '25%' }} />
+                        <img src={CuerdaExt1} style={{ ...alignCuerda, marginLeft: '25%' }} />
                     </ParallaxLayer>
                     <ParallaxLayer offset={2} speed={0.01}>
-                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '24%' }} />
+                        <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: '24%' }} />
                     </ParallaxLayer>
                     <ParallaxLayer offset={3} speed={0.01}>
-                        <img src={CuerdaExt1} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '23%' }} />
+                        <img src={CuerdaExt1} style={{ ...alignCuerda, marginLeft: '23%' }} />
                     </ParallaxLayer>
                     <ParallaxLayer offset={4} speed={0.01}>
-                        <img src={CuerdaExt} alt='Hombre Colgado' style={{ height: '102vh', zIndex: '-1', display: 'flex', alignItems: 'start', marginLeft: '22%' }} />
+                        <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: '22%' }} />
                     </ParallaxLayer>
                 </div>
                 {/* ALBERT CAMUS ------------------------------------ */}
-                <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }} id="presentacion">
+                <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center', width: '70%', marginLeft: '15%' }}>
                     <div ref={elemento1} className={isIntersecting ? 'blur-in' : 'blur-out'}>
                         <h6>
                             Pero, ¿qué son cien millones de muertos? Cuando se ha hecho la guerra apenas sabe ya nadie lo que es un muerto. Y además un hombre muerto solamente tiene peso cuando le ha visto uno muerto; cien millones de cadáveres son más que humo en la imaginación.
@@ -115,7 +117,7 @@ export default function App() {
                 {/* DATOS ----------------------------------------- */}
                 <ParallaxLayer offset={10} sticky={{ start: 10, end: 11 }} speed={0.5} style={{ display: 'flex', justifyContent: 'flex-end' }} id="datos">
                     <div style={{ textAlign: 'justify', width: '25%', marginRight: '8%' }}>
-                        <h3 ref={elemento2} className={isIntersecting ? 'blur-in' : 'blur-out'}>
+                        <h3>
                             Medio
                         </h3>
                         <p>

@@ -5,6 +5,7 @@ import { SearchResultsList } from './searchResultsList'
 
 export default function Estadisticas() {
     const [results, setResults] = useState([])
+    
     return (
         <div className="estadisticas">
             <div>
