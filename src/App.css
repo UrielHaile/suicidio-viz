@@ -4,11 +4,6 @@
   padding: 0%;
 
   text-align: center;
-  font-family: 'Pavanam', sans-serif;
-  font-family: 'Secular One', sans-serif;
-  font-family: 'Shippori Antique B1', sans-serif;
-  font-family: 'Sofia Sans', sans-serif;
-  font-family: 'Tilt Warp', cursive;
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
   font-weight: 400;
@@ -21,6 +16,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 /* Estilos para el Texto */
 h1 {
@@ -49,6 +45,53 @@ h6 {
   font-size: 1.5em;
 }
 
+/* ESTILOS TEXTO ROBADOS 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+*/
 /* Estilos para el scrollbar :))  */
 ::-webkit-scrollbar {
   /* Ancho del scrollbar */
@@ -104,11 +147,11 @@ h6 {
   }
 }
 
-.blur-out-expand {
+.blur-out {
   animation: blur-out-expand 0.5s linear both
 }
 
-@keyframes blur-out-expand {
+@keyframes blur-out {
   0% {
     transform: scale(1);
     filter: blur(.01px);
