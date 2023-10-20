@@ -1,0 +1,21 @@
+{
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
+        "no-console" : 0
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended",  "plugin:react/jsx-runtime"],
+    "parserOptions": {
+        "ecmaVersion": 14,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+    },
+    "plugins": ["react", "react-hooks"],
+    "env": {
+      "browser": true,
+      "es2021": true
+    }
+}
+
