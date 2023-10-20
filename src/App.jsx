@@ -1,6 +1,8 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Estadisticas from "./components/estadisticas.jsx";
+import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
+import { useMapTools } from "./hooks/useMapTools.jsx";
 
 /* Estilos */
 import "./App.css";
@@ -12,12 +14,13 @@ import sujetoPrincipalBottom from "./img/sujetoPrincipalBottom.png";
 import cuerda from "./img/cuerda.png";
 import CuerdaExt from "./img/CuerdaExt.png";
 import CuerdaExt1 from "./img/CuerdaExt1.png";
-import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
 /* import pildoras from './img/pildoras.png' */
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
   const alignCuerda = { height: "102vh", zIndex: "-1", display: "flex", alignItems: "start" };
+
+  const {map} = useMapTools();
 
   return (
     <div className="App">
@@ -41,7 +44,7 @@ export default function App() {
           </ParallaxLayer>
         </div>
         {/* ALBERT CAMUS ------------------------------------ */}
-        <ParallaxLayerText></ParallaxLayerText>
+        <ParallaxLayerText />
         {/* ESTADÍSTICA ------------------------------------- */}
         <ParallaxLayer
           offset={1}

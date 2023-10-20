@@ -1,5 +1,5 @@
 import { ParallaxLayer } from "@react-spring/parallax";
-import useIntersection from "../logic/useIntersection.jsx";
+import useIntersection from "../hooks/useIntersection.jsx";
 
 export const ParallaxLayerText = () => {
   const [elemento1, isIntersecting] = useIntersection({});
