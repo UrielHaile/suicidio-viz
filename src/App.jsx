@@ -2,7 +2,8 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Estadisticas from "./components/estadisticas.jsx";
 import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
-import { useMapTools } from "./hooks/useMapTools.jsx";
+/*import { useMapTools } from "./hooks/useMapTools.jsx";
+import {}
 
 /* Estilos */
 import "./App.css";
@@ -18,9 +19,10 @@ import CuerdaExt1 from "./img/CuerdaExt1.png";
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
-  const alignCuerda = { height: "102vh", zIndex: "-1", display: "flex", alignItems: "start" };
 
-  const {map} = useMapTools();
+  {
+    /*const {map} = useMapTools(); */
+  }
 
   return (
     <div className="App">
@@ -28,19 +30,19 @@ export default function App() {
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
-            <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: "26%" }} />
+            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "26%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.01}>
-            <img src={CuerdaExt1} style={{ ...alignCuerda, marginLeft: "25%" }} />
+            <img src={CuerdaExt1} className="ext-cuerda" style={{ marginLeft: "25%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.01}>
-            <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: "24%" }} />
+            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "24%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={3} speed={0.01}>
-            <img src={CuerdaExt1} style={{ ...alignCuerda, marginLeft: "23%" }} />
+            <img src={CuerdaExt1} className="ext-cuerda" style={{ marginLeft: "23%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={4} speed={0.01}>
-            <img src={CuerdaExt} style={{ ...alignCuerda, marginLeft: "22%" }} />
+            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "22%" }} />
           </ParallaxLayer>
         </div>
         {/* ALBERT CAMUS ------------------------------------ */}
@@ -50,61 +52,95 @@ export default function App() {
           offset={1}
           speed={0.5}
           sticky={{ start: 1, end: 3 }}
-          style={{ ...alignCenter, justifyContent: "center" }}
         >
-          <h1>493</h1>
+          <div className="estadistica">
+            <h1>493</h1>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}
           speed={0.1}
           sticky={{ start: 2, end: 3 }}
-          style={{ ...alignCenter, justifyContent: "center", paddingTop: "10%" }}
         >
-          <h2>Suicidios</h2>
+          <div className="estadistica">
+            <h2>Suicidios</h2>
+          </div>
         </ParallaxLayer>
         {/* HISTORIA -------------------------------------- */}
         <ParallaxLayer
           offset={4}
           sticky={{ start: 5, end: 7 }}
-          style={{ display: "flex", marginRight: "50%", marginLeft: "15%", width: "45%" }}
-          id=""
+          className="cuerda-fin"
         >
           <img src={cuerda} alt="Cuerda" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={4}
-          sticky={{ start: 4, end: 5 }}
-          style={{ display: "flex", textAlign: "left", marginLeft: "50%", width: "45%", paddingTop: "10%" }}
+          sticky={{ start: 4, end: 6 }}
+          className="historia"
         >
-          <p>
-            Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los pasillos
-            de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la información y
-            los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la directora de manera
-            oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó silencioso, gris y
-            sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el tema. Y no de la
-            víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron en la mente de mis
-            compañeros:
-          </p>
+          <div className="historia-parrafo">
+            <p>
+              Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los pasillos
+              de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la información y
+              los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la directora de manera
+              oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó silencioso, gris y
+              sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el tema. Y no de la
+              víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron en la mente de mis
+              compañeros:
+            </p>
+          </div>
         </ParallaxLayer>
         {/* PREGUNTAS ------------------------------------- */}
         <ParallaxLayer
-          offset={6}
-          sticky={{ start: 6, end: 7 }}
-          style={{ display: "block", textAlign: "left", marginLeft: "50%", width: "45%", paddingTop: "10%" }}
+          offset={7}
+          sticky={{ start: 7, end: 8 }}
         >
-          <h6 className="blur-in">¿En qué situación habrá estado la compañera para tomar tal decisión?</h6>
-          <h6>¿La universidad puede aportar algo positivo para la prevención de este tipo de circunstancias?</h6>
-          <h6>¿Y qué hay del gobierno?</h6>
-          <h6>¿Cuántos estudiantes tienen este tipo de pensamientos?</h6>
-          <h6>¿La mayoría están en este rango de edad universitario?</h6>
+          <div className="preguntas">
+            <div className="pregunta-derecha">
+              <p>
+                ¿En qué situación habrá estado la compañera para tomar tal decisión?
+              </p>
+            </div>
+
+            <div className="pregunta-izquierda">
+              <p>
+                ¿La universidad puede aportar algo positivo para la prevención de este tipo de circunstancias?
+              </p>
+            </div>
+
+            <div className="pregunta-derecha">
+              <p>
+                ¿Y qué hay del gobierno?
+              </p>
+            </div>
+
+            <div className="pregunta-izquierda">
+              <p>
+                ¿Cuántos estudiantes tienen este tipo de pensamientos?
+              </p>
+            </div>
+
+            <div className="pregunta-derecha">
+              <p>
+                ¿La mayoría están en este rango de edad universitario?
+              </p>
+            </div>
+          </div>
         </ParallaxLayer>
-        {/* HOMBRE COLGADO ESQUEMA ------------------------- */}
-        <ParallaxLayer offset={9} sticky={{ start: 9, end: 12 }} speed={0.01}>
+        {/* HOMBRE COLGADO ESQUEMA ------------------------ */}
+        <ParallaxLayer
+          offset={10}
+          sticky={{ start: 10, end: 12 }}
+          speed={0.01}>
           <center>
             <img src={sujetoPrincipalTop} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
           </center>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} sticky={{ start: 13, end: 16 }} speed={0.01}>
+        <ParallaxLayer
+          offset={9}
+          sticky={{ start: 13, end: 16 }}
+          speed={0.01}>
           <center>
             <img src={sujetoPrincipalBottom} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
           </center>
@@ -194,12 +230,15 @@ export default function App() {
           sticky={{ start: 17, end: 19 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
-          id="datosEstado"
         >
-          <div>
-            <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>Datos generales del estado</h6>
-            <hr style={{ color: "red", height: "2px", backgroundColor: "red", border: "none", margin: "0%" }} />
-            <p>En las siguientes gráficas se presentan las categorías con los datos del estado de Guanajuato.</p>
+          <div className="estado">
+            <h6>
+              Datos generales del estado
+            </h6>
+            <hr />
+            <p>
+              En las siguientes gráficas se presentan las categorías con los datos del estado de Guanajuato.
+            </p>
           </div>
         </ParallaxLayer>
         {/* MAPA	*/}
