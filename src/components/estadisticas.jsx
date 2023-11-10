@@ -12,7 +12,7 @@ export default function Estadisticas() {
                 <SearchBar setResults={setResults} />
                 {results && results.length > 0 && <SearchResultsList results={results} />}
             </div>
-            <header className="titulo">
+            <header>
                 <h2>León</h2>
                 <h3>Número de suicidios</h3>
             </header>

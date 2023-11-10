@@ -21,7 +21,7 @@ export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
 
   {
-    /*const {map} = useMapTools(); */
+    /*const { map } = useMapTools(); */
   }
 
   return (
