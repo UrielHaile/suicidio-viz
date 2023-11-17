@@ -11,6 +11,9 @@ export const useMapTools = function (geoJSONpath) {
   // only fetch map data once and create a tooltip
   useEffect(() => {
     d3.json(geoJSONpath)
+//    d3.json("gtogeo.json")
+//    d3.json("guanajuato_small.json")
+//    d3.json("guanajuato_small_geo2.json")
       .then((data) => {
         setMapData((prevState) => {
           return { ...prevState, data: data, loading: false };
@@ -21,7 +24,10 @@ export const useMapTools = function (geoJSONpath) {
       });
 
     /// tooltip creation
-    d3.select("body").append("div").attr("id", "tooltip").attr("style", "position: absolute; opacity: 0");
+    d3.select("body")
+      .append("div")
+      .attr("id", "tooltip")
+      .attr("style", "position: absolute; opacity: 0");
     ///
   }, [geoJSONpath]);
 

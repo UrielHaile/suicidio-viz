@@ -1,8 +1,7 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
-import Estadisticas from "./components/estadisticas.jsx";
 import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
-import { useMapTools } from "./hooks/useMapTools.jsx";
+import Estadisticas from "./components/estadisticas.jsx";
+import State from "./components/State.jsx";
 
 /* Estilos */
 import "./App.css";
@@ -20,11 +19,9 @@ export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
   const alignCuerda = { height: "102vh", zIndex: "-1", display: "flex", alignItems: "start" };
 
-  const {map} = useMapTools();
-
   return (
     <div className="App">
-      <Parallax pages={25} style={{ top: "0", left: "0" }}>
+      <Parallax pages={30} style={{ top: "0", left: "0" }}>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -205,11 +202,24 @@ export default function App() {
         {/* MAPA	*/}
         <ParallaxLayer
           offset={20}
-          sticky={{ start: 20, end: 25 }}
+          sticky={{ start: 20, end: 21 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={23}
+          sticky={{ start: 23, end: 24 }}
+          speed={0.5}
+          style={{display: "flex", 
+                    "align-items": "center",
+                    "justify-content": "center" }}
+        >
+          <div >
+            <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>Mapa</h6>
+            <State />
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
