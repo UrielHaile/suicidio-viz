@@ -1,7 +1,7 @@
-import { SearchBar } from './SearchBar'
-import './estadisticas.css'
-import { useState } from 'react'
-import { SearchResultsList } from './searchResultsList'
+import { SearchBar } from "./SearchBar";
+import "./estadisticas.css";
+import { useState } from "react";
+import { SearchResultsList } from "./searchResultsList";
 
 export default function Estadisticas() {
     const [results, setResults] = useState([])
@@ -12,7 +12,7 @@ export default function Estadisticas() {
                 <SearchBar setResults={setResults} />
                 {results && results.length > 0 && <SearchResultsList results={results} />}
             </div>
-            <header>
+            <header className="titulo">
                 <h2>
                     León
                 </h2>
