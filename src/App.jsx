@@ -19,9 +19,7 @@ import pildoras from "./img/pildoras.png";
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
-  const alignCuerda = { height: "102vh", zIndex: "-1", display: "flex", alignItems: "start" };
 
-  const {map} = useMapTools();
 
   return (
     <div className="App">
@@ -259,9 +257,11 @@ export default function App() {
           offset={23}
           sticky={{ start: 23, end: 24 }}
           speed={0.5}
-          style={{display: "flex", 
-                    "align-items": "center",
-                    "justify-content": "center" }}
+          style={{
+            display: "flex",
+            "align-items": "center",
+            "justify-content": "center"
+          }}
         >
           <div >
             <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>Mapa</h6>
