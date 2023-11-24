@@ -20,9 +20,7 @@ import pildoras from "./img/pildoras.png";
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
 
-  {
-    /*const { map } = useMapTools(); */
-  }
+  //const { map } = useMapTools();
 
   return (
     <div className="App">
@@ -247,14 +245,25 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        {/* MAPA	*/}
+        {/* Visualización estadísticas	*/}
         <ParallaxLayer
           offset={20}
-          sticky={{ start: 20, end: 25 }}
+          sticky={{ start: 20, end: 23 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
+        </ParallaxLayer>
+        {/* MAPA	*/}
+        <ParallaxLayer
+          offset={23}
+          sticky={{ start: 23, end: 25 }}
+          speed={0.5}
+          style={{ ...alignCenter, justifyContent: "center" }}
+        >
+          <h1>
+            Mapa
+          </h1>
         </ParallaxLayer>
       </Parallax>
     </div>
