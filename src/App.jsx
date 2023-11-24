@@ -11,11 +11,11 @@ import "./App.css";
 /* Imagenes */
 import sujetoPrincipalTop from "./img/sujetoPrincipalTop.png";
 import sujetoPrincipalBottom from "./img/sujetoPrincipalBottom.png";
-/* import bala from './img/bala.png' */
+import bala from "./img/bala.png";
 import cuerda from "./img/cuerda.png";
 import CuerdaExt from "./img/CuerdaExt.png";
 import CuerdaExt1 from "./img/CuerdaExt1.png";
-/* import pildoras from './img/pildoras.png' */
+import pildoras from "./img/pildoras.png";
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
@@ -95,17 +95,18 @@ export default function App() {
         <ParallaxLayer
           offset={7}
           sticky={{ start: 7, end: 8 }}
+          className="preguntas-container"
         >
           <div className="preguntas">
             <div className="pregunta-derecha">
               <p>
-                ¿En qué situación habrá estado la compañera para tomar tal decisión?
+                ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
               </p>
             </div>
 
             <div className="pregunta-izquierda">
               <p>
-                ¿La universidad puede aportar algo positivo para la prevención de este tipo de circunstancias?
+                ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
               </p>
             </div>
 
@@ -117,13 +118,13 @@ export default function App() {
 
             <div className="pregunta-izquierda">
               <p>
-                ¿Cuántos estudiantes tienen este tipo de pensamientos?
+                ¿Cuántos estudiantes tienen <br />este tipo de pensamientos?
               </p>
             </div>
 
             <div className="pregunta-derecha">
               <p>
-                ¿La mayoría están en este rango de edad universitario?
+                ¿La mayoría están en este rango de edad?
               </p>
             </div>
           </div>
@@ -159,6 +160,11 @@ export default function App() {
               El ahorcamiento, la estrangulación y la sofocación es la manera más común de quitarse la vida en el
               estado.
             </p>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start" }}>
+              <img src={cuerda} alt="Cuerda" style={{ width: "30%" }} />
+              <img src={pildoras} alt="Pildoras" style={{ width: "30%" }} />
+              <img src={bala} alt="Bala" style={{ width: "50%" }} />
+            </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
