@@ -3,6 +3,8 @@ import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
 import Estadisticas from "./components/estadisticas.jsx";
 import State from "./components/State.jsx";
 
+import Observador from "./components/observador.jsx";
+
 /* Estilos */
 import "./App.css";
 
@@ -43,7 +45,7 @@ export default function App() {
         {/* ALBERT CAMUS ------------------------------------ */}
         <ParallaxLayerText />
         {/* ESTADÍSTICA ------------------------------------- */}
-        <ParallaxLayer
+        <Observador
           offset={1}
           speed={0.5}
           sticky={{ start: 1, end: 3 }}
@@ -51,7 +53,7 @@ export default function App() {
           <div className="estadistica">
             <h1>493</h1>
           </div>
-        </ParallaxLayer>
+        </Observador>
         <ParallaxLayer
           offset={1}
           speed={0.1}
@@ -93,11 +95,13 @@ export default function App() {
           className="preguntas-container"
         >
           <div className="preguntas">
-            <div className="pregunta-derecha">
-              <p>
-                ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
-              </p>
-            </div>
+            <Observador offset={7} speed={0.5} sticky={{ start: 7, end: 8 }}>
+              <div className="pregunta-derecha">
+                <p>
+                  ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
+                </p>
+              </div>
+            </Observador>
 
             <div className="pregunta-izquierda">
               <p>
