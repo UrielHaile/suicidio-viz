@@ -11,18 +11,8 @@ import Visualizacion from "./visualizacion";
 
 export default function Estadisticas() {
   const [results, setResults] = useState([]);
-
-  /*   const { mapData } = useMapTools("gto.geojson");
-    const cantidad = mapData.data.features.map((data) => {
-      return data.properties.suicidios_2019;
-    });
-    const municipio = mapData.data.features.map((data) => {
-      return data.properties.mun_name;
-    }); */
-
-  console.log(results); 
   
-  if (results.length == 1) {
+  if (results.length) {
     return  (
     <div className="estadisticas">
       <div>

@@ -5,11 +5,13 @@ import "./estadisticas.css";
 export const SearchBar = ({ setResults }) => {
   const [busqueda, setBusqueda] = useState("");
   const fetchData = (value) => {
+    const name = value.toLowerCase();
+
     fetch("./states.json")
       .then((response) => response.json())
       .then((json) => {
         const results = json.filter((user) => {
-          return value && user && user.name && user.name.toLowerCase().includes(value);
+          return name && user && user.name && user.name.toLowerCase().includes(name);
         });
         //console.log(results);
         setResults(results);
