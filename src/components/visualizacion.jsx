@@ -31,9 +31,7 @@ const Visualizacion = ({ cantidad }) => {
     }, [cantidad]);
 
     return (
-        <div id="contenedor" className="contenedor">
-            <img src={p1} alt="prueba" />
-
+        <div id="contenedor">
             {personas.map((imagen, index) => (
                 <img
                     key={index}
@@ -42,9 +40,10 @@ const Visualizacion = ({ cantidad }) => {
                     className="persona"
                     style={{
                         position: "absolute",
-                        left: `${getRandomNumber(0, 650)}px`,
-                        top: `${getRandomNumber(0, 650)}px`,
-                        maxWidth: "50px"
+                        // eslint-disable-next-line no-undef
+                        left: `${getRandomNumber(0, contenedor.offsetWidth - 100)}px`,
+                        // eslint-disable-next-line no-undef
+                        top: `${getRandomNumber(0, contenedor.offsetHeight - 100)}px`,
                     }}
                 />
             ))}

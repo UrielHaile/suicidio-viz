@@ -1,15 +1,19 @@
+import { ParallaxLayer } from "@react-spring/parallax";
 import useIntersection from "../hooks/useIntersection.jsx";
 
-const Observador = (clase, content) => {
+// eslint-disable-next-line react/prop-types
+const Observador = ({ offset, speed, style, children }) => {
     const [element, isIntersecting] = useIntersection({});
 
     return (
-        <div
-            ref={element}
-            className={isIntersecting ? { clase } : ""}
-        >
-            {content}
-        </div>
+        <ParallaxLayer
+            offset={offset}
+            speed={speed}
+            style={style}>
+            <div ref={element} className={isIntersecting ? "blur-in" : "blur-out"}>
+                {children}
+            </div>
+        </ParallaxLayer>
     );
 };
 

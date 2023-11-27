@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Parallax pages={30} style={{ top: "0", left: "0" }}>
+      <Parallax pages={25} style={{ top: "0", left: "0" }}>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -64,7 +64,7 @@ export default function App() {
         {/* HISTORIA -------------------------------------- */}
         <ParallaxLayer
           offset={4}
-          sticky={{ start: 5, end: 7 }}
+          sticky={{ start: 5, end: 8 }}
           className="cuerda-fin"
         >
           <img src={cuerda} alt="Cuerda" />
@@ -242,23 +242,24 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        {/* Visualización estadísticas	*/}
+        {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
           offset={20}
-          sticky={{ start: 20, end: 25 }}
+          sticky={{ start: 20, end: 22 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
         </ParallaxLayer>
+        {/* MAPA ---------------------	*/}
         <ParallaxLayer
           offset={23}
-          sticky={{ start: 23, end: 24 }}
+          sticky={{ start: 23, end: 25 }}
           speed={0.5}
           style={{
             display: "flex",
-            "align-items": "center",
-            "justify-content": "center"
+            alignItems: "center",
+            justifyContent: "center"
           }}
         >
           <div >
@@ -267,6 +268,6 @@ export default function App() {
           </div>
         </ParallaxLayer>
       </Parallax>
-    </div>
+    </div >
   );
 }

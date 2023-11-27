@@ -5,7 +5,6 @@
 }
 
 /* FUENTES DE TEXTO */
-
 /* Lyontext web */
 @font-face {
   font-family: 'Mignon-Medium';
@@ -16,9 +15,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-/* Fragment */
-
 
 /* Algebra */
 @font-face {
@@ -54,7 +50,7 @@ p {
 
 /* Estilos para el scrollbar :))  */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: .8vw;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -67,7 +63,6 @@ p {
 }
 
 /* Estilos secciones */
-
 .frase {
   display: flex;
   justify-content: center;
@@ -214,16 +209,15 @@ p {
 ---------------------------------------------- */
 .blur-in {
   animation: blur-in 0.7s linear both;
-  animation-timeline: view();
 }
 
 @keyframes blur-in {
-  0% {
+  from {
     filter: blur(12px);
     opacity: 0
   }
 
-  100% {
+  to {
     filter: blur(0);
     opacity: 1
   }

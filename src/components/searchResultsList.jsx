@@ -1,4 +1,5 @@
 import React from "react";
+
 export const SearchResultsList = ({ results }) => {
   const SearchResult = ({ result }) => {
     return <div>{result.name}</div>;

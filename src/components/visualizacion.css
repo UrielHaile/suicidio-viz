@@ -12,6 +12,17 @@
 
     width: 90%;
     height: 65%;
-    background-color: blue;
     overflow: hidden;
+}
+
+#contenedor img {
+    max-height: 20%;
+    max-width: 5%;
+}
+
+/* ESTILOS PARA PANTALLAS PEQUEÑAS */
+@media screen and (max-width: 400px) {
+    #contenedor {
+        transform: translate(-40%, -20%);
+    }
 }

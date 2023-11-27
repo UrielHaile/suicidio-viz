@@ -18,7 +18,7 @@ export default function Estadisticas() {
         <h3>Número de suicidios</h3>
       </header>
       <div className="decoracion-top"></div>
-      <Visualizacion />
+      <Visualizacion cantidad={100} />
     </div>
   );
 }
