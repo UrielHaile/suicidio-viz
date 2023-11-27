@@ -8,7 +8,7 @@ export const SearchResultsList = ({ results }) => {
   return (
     <div className="results-list">
       {results.map((result) => (
-        <SearchResult key={result.id} result={result} />
+        <SearchResult key={result.mun_code} result={result} />
       ))}
     </div>
   );

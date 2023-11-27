@@ -20,6 +20,24 @@ export default function Estadisticas() {
       return data.properties.mun_name;
     }); */
 
+  console.log(results); 
+  
+  if (results.length == 1) {
+    return  (
+    <div className="estadisticas">
+      <div>
+        <SearchBar setResults={setResults} />
+        {results && results.length > 0 && <SearchResultsList results={results} />}
+      </div>
+      <header className="titulo">
+        <h2>{results[0].name}</h2>
+        <h3>Número de suicidios {results[0].suicidios}</h3>
+      </header>
+      <Visualizacion cantidad={results[0].suicidios} />
+    </div>
+  );
+  }
+
   return (
     <div className="estadisticas">
       <div>
@@ -27,10 +45,10 @@ export default function Estadisticas() {
         {results && results.length > 0 && <SearchResultsList results={results} />}
       </div>
       <header className="titulo">
-        <h2>León {/*{municipio}*/}</h2>
-        <h3>Número de suicidios{/*{cantidad}*/}</h3>
+        <h2>Municipio</h2>
+        <h3>Número de suicidios</h3>
       </header>
-      <Visualizacion cantidad={5/*{cantidad}*/} />
+      <Visualizacion cantidad={0} />
     </div>
   );
 }

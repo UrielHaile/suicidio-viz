@@ -30,6 +30,7 @@
     "vite": "^4.4.5"
   },
   "static": [
-    "public/gto.geojson"
+    "public/gto.geojson",
+    "public/states.json"
   ]
 }
