@@ -212,9 +212,9 @@ p {
   URL: https://xsgames.co/animatiss
   Twitter: @xsgames_
 ---------------------------------------------- */
-
 .blur-in {
   animation: blur-in 0.7s linear both;
+  animation-timeline: view();
 }
 
 @keyframes blur-in {

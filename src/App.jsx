@@ -2,8 +2,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
 import Estadisticas from "./components/estadisticas.jsx";
 import State from "./components/State.jsx";
-/*import { useMapTools } from "./hooks/useMapTools.jsx";
-import {}
 
 /* Estilos */
 import "./App.css";
