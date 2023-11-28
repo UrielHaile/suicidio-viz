@@ -41,29 +41,52 @@
 .decoracion-top {
     background-color: #000;
     width: 50%;
-    height: 70px;
+    height: 8vh;
     position: absolute;
     top: 80px;
     right: 10px;
 }
 
-header {
+.titulo {
     position: absolute;
     top: 120px;
     left: 100px;
     text-align: left;
-    margin: 0%;
-    padding: 0%;
 }
 
-header h2 {
+.titulo h2 {
     color: #000;
-    margin: 0%;
-    padding: 0%;
+    font-size: 3rem;
 }
 
-header h3 {
+.titulo h3 {
     color: #00000075;
-    margin: 0%;
-    padding: 0%;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+    .decoracion-top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    #busqueda {
+        height: 100px;
+        padding: 30px;
+        font-size: 3rem;
+        border-radius: 50px;
+    }
+
+    .titulo {
+        top: 250px;
+    }
+
+    .titulo h2 {
+        font-size: 7rem;
+    }
+
+    .titulo h3 {
+        font-size: 5rem;
+    }
 }
