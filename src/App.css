@@ -243,6 +243,8 @@ p {
   align-items: center;
   justify-content: space-around;
   width: 50%;
+
+  font-size: 2rem;
 }
 
 .medio img {
@@ -384,6 +386,15 @@ p {
 
   .preguntas p {
     font-size: 5rem;
+  }
+
+  .corazon {
+    position: absolute;
+    right: 31%;
+  }
+
+  .corazon img {
+    max-width: 40%;
   }
 
   #datos h3 {
