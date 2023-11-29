@@ -10,6 +10,7 @@ import "./App.css";
 /* Imagenes */
 import sujetoPrincipalTop from "./img/sujetoPrincipalTop.png";
 import sujetoPrincipalBottom from "./img/sujetoPrincipalBottom.png";
+import corazon from "./img/KokoroR.png";
 import bala from "./img/bala.png";
 import cuerda from "./img/cuerda.png";
 import CuerdaExt from "./img/CuerdaExt.png";
@@ -65,7 +66,7 @@ export default function App() {
         </ParallaxLayer>
         {/* HISTORIA -------------------------------------- */}
         <ParallaxLayer
-          offset={4}
+          offset={5}
           sticky={{ start: 5, end: 8 }}
           className="cuerda-fin"
         >
@@ -95,35 +96,35 @@ export default function App() {
           className="preguntas-container"
         >
           <div className="preguntas">
-            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: 1 }}>
+            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: .1 }}>
               <div className="pregunta-derecha">
                 <p>
                   ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
                 </p>
               </div>
             </Observador>
-            <Observador offset={1} speed={0.5} sticky={{ start: 1, end: 2 }}>
+            <Observador offset={.2} speed={0.5} sticky={{ start: .2, end: .3 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
                 </p>
               </div>
             </Observador>
-            <Observador offset={2} speed={0.5} sticky={{ start: 2, end: 3 }}>
+            <Observador offset={.2} speed={0.5} sticky={{ start: .2, end: .4 }}>
               <div className="pregunta-derecha">
                 <p>
                   ¿Y qué hay del gobierno?
                 </p>
               </div>
             </Observador>
-            <Observador offset={3} speed={0.5} sticky={{ start: 3, end: 4 }}>
+            <Observador offset={.3} speed={0.5} sticky={{ start: .3, end: .5 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿Cuántos estudiantes tienen <br />este tipo de pensamientos?
                 </p>
               </div>
             </Observador>
-            <Observador offset={4} speed={0.5} sticky={{ start: 4, end: 5 }}>
+            <Observador offset={.4} speed={0.5} sticky={{ start: .4, end: .6 }}>
               <div className="pregunta-derecha">
                 <p>
                   ¿La mayoría están en este rango de edad?
@@ -137,13 +138,18 @@ export default function App() {
           offset={10}
           sticky={{ start: 10, end: 12 }}
           speed={0.01}>
-          <center>
-            <img
-              src={sujetoPrincipalTop}
-              alt="Hombre Colgado"
-              style={{ height: "100vh", zIndex: "-1" }}
-            />
-          </center>
+          <div className="sujeto-principal">
+            <center>
+              <img
+                src={sujetoPrincipalTop}
+                alt="Hombre Colgado"
+                style={{ height: "100vh", zIndex: "-1" }}
+              />
+            </center>
+            <div className="corazon">
+              <img src={corazon} alt="Corazon" />
+            </div>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={9}
@@ -165,16 +171,25 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginRight: "8%" }}>
+          <div className="dato-derecha">
             <h3>Medio</h3>
             <p>
               El ahorcamiento, la estrangulación y la sofocación es la manera más común de quitarse la vida en el
               estado.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start" }}>
-              <img src={cuerda} alt="Cuerda" style={{ width: "30%" }} />
-              <img src={pildoras} alt="Pildoras" style={{ width: "30%" }} />
-              <img src={bala} alt="Bala" style={{ width: "50%" }} />
+            <div className="medios-container">
+              <div className="medio">
+                <img src={cuerda} alt="Cuerda" />
+                <h2>420</h2>
+              </div>
+              <div className="medio">
+                <img src={pildoras} alt="Pildoras" />
+                <h2>31</h2>
+              </div>
+              <div className="medio">
+                <img src={bala} alt="Bala" />
+                <h2>21</h2>
+              </div>
             </div>
           </div>
         </ParallaxLayer>
@@ -185,7 +200,7 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-start" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginLeft: "8%", marginTop: "5%" }}>
+          <div className="dato-izquierda" style={{ marginTop: "5%" }}>
             <h3>Escolaridad</h3>
             <p>
               El ahorcamiento, la estrangulación y la sofocación es la manera más común de quitarse la vida en el
@@ -200,7 +215,7 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginRight: "8%", marginTop: "10%" }}>
+          <div className="dato-derecha" style={{ marginTop: "10%" }}>
             <h3>Edad</h3>
             <p>De los veinticinco a los veintinueve está la mayor parte de víctimas del suicidio del estado.</p>
           </div>
@@ -212,7 +227,7 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-start" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginLeft: "8%", marginTop: "15%" }}>
+          <div className="dato-izquierda" style={{ marginTop: "15%" }}>
             <h3>Mes</h3>
             <p>En primavera y verano suceden buena parte de los suicidios en todo el estado.</p>
           </div>
@@ -224,7 +239,7 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginRight: "8%", marginTop: "20%" }}>
+          <div className="dato-derecha" style={{ marginTop: "20%" }}>
             <h3>Estado Civil</h3>
             <p>De los veinticinco a los veintinueve está la mayor parte de víctimas del suicidio del estado.</p>
           </div>
@@ -236,7 +251,7 @@ export default function App() {
           style={{ display: "flex", justifyContent: "flex-start" }}
           id="datos"
         >
-          <div style={{ textAlign: "justify", width: "25%", marginLeft: "8%", marginTop: "25%" }}>
+          <div className="dato-izquierda" style={{ marginTop: "25%" }}>
             <h3>Localidad</h3>
             <p>En su mayoría, las personas se quitan la vida en las zonas urbanas en el estado.</p>
           </div>

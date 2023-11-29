@@ -160,6 +160,7 @@ p {
   justify-content: flex-end;
   text-align: left;
   margin-bottom: 50px;
+  margin-right: 10%;
 }
 
 .pregunta-izquierda {
@@ -168,6 +169,40 @@ p {
   justify-content: flex-start;
   text-align: left;
   margin-bottom: 50px;
+  margin-left: 25%;
+}
+
+.sujeto-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.corazon {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+}
+
+.corazon img {
+  max-width: 15%;
+  animation: pulso;
+  scale: .7;
+  animation-duration: 2s;
+  animation-timing-function: steps(7, end);
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulso {
+  0% {
+    scale: .7;
+  }
+
+  50% {
+    scale: 1;
+  }
 }
 
 #datos {
@@ -175,17 +210,47 @@ p {
 }
 
 #datos h3 {
-  padding: 0%;
-  margin: 0%;
   font-size: 3rem;
   font-style: bold;
 }
 
 #datos p {
-  padding: 0%;
-  margin: 0%;
   font-size: 1.8rem;
   text-align: start;
+}
+
+.dato-derecha {
+  text-align: justify;
+  width: 22.5%;
+  margin-right: 5%;
+}
+
+.dato-izquierda {
+  text-align: justify;
+  width: 22.5%;
+  margin-left: 5%
+}
+
+.medios-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.medio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.medio img {
+  display: flex;
+  justify-content: space-around;
+  max-height: 10%;
+  max-width: 40%;
+  margin: 20px;
 }
 
 .estado {
