@@ -292,38 +292,81 @@ p {
   font-size: 7em;
 }
 
-.creditos-container {
+.dedicatoria-container {
   display: grid;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  margin: 0 auto 0 auto;
 }
 
-.creditos {
+.dedicatoria {
   width: 80%;
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
 }
 
-.creditos p {
+.dedicatoria p {
   font-size: 2.2rem;
   text-align: center;
   font-style: italic;
   margin-bottom: 5%;
 }
 
-.creditos h2 {
-  font-size: 2em;
+.creditos-parallax {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.creditos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.creditos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+}
+
+.creditos h3 {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.creditos p {
+  font-size: 4rem;
+  text-align: center;
+  font-style: none;
+}
+
+.logo-container {
+  text-align: center;
+  width: 50vw;
+}
+
+.logo-container h2 {
+  font-size: 3em;
   text-align: center;
   margin-bottom: 2%;
 }
 
-.creditos img {
-  height: 300px;
+.logo-container img {
+  height: 600px;
+  margin: 5% 5% 5% 5%;
 }
 
 /* ----------------------------------------------
@@ -417,7 +460,7 @@ p {
     font-size: 15rem;
   }
 
-  .creditos p {
+  .dedicatoria p {
     font-size: 5rem;
   }
 
@@ -426,7 +469,11 @@ p {
   }
 
   .creditos img {
-    height: 600px;
+    height: 400px;
+  }
+
+  .logo-container h2, p {
+    font-size: 5em;
   }
 }
 
@@ -484,7 +531,7 @@ p {
     font-size: 1.8rem;
   }
 
-  .creditos p {
+  .dedicatoria p {
     font-size: 1.5rem;
   }
 

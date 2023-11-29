@@ -21,10 +21,9 @@ import logoUG from "./img/UG.png";
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
 
-
   return (
     <div className="App">
-      <Parallax pages={29} style={{ top: "0", left: "0" }}>
+      <Parallax pages={30} style={{ top: "0", left: "0" }}>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -46,121 +45,84 @@ export default function App() {
         {/* ALBERT CAMUS ------------------------------------ */}
         <ParallaxLayerText />
         {/* ESTADÍSTICA ------------------------------------- */}
-        <Observador
-          offset={1}
-          speed={0.5}
-          sticky={{ start: 1, end: 3 }}
-        >
+        <Observador offset={1} speed={0.5} sticky={{ start: 1, end: 3 }}>
           <div className="estadistica">
             <h1>493</h1>
           </div>
         </Observador>
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          sticky={{ start: 2, end: 3 }}
-        >
+        <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }}>
           <div className="estadistica">
             <h2>Suicidios</h2>
           </div>
         </ParallaxLayer>
         {/* HISTORIA -------------------------------------- */}
-        <ParallaxLayer
-          offset={5}
-          sticky={{ start: 5, end: 8 }}
-          className="cuerda-fin"
-        >
+        <ParallaxLayer offset={5} sticky={{ start: 5, end: 8 }} className="cuerda-fin">
           <img src={cuerda} alt="Cuerda" />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={4}
-          sticky={{ start: 4, end: 6 }}
-          className="historia"
-        >
+        <ParallaxLayer offset={4} sticky={{ start: 4, end: 6 }} className="historia">
           <div className="historia-parrafo">
             <p>
-              Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los pasillos
-              de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la información y
-              los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la directora de manera
-              oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó silencioso, gris y
-              sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el tema. Y no de la
-              víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron en la mente de mis
-              compañeros:
+              Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los
+              pasillos de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la
+              información y los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la
+              directora de manera oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó
+              silencioso, gris y sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el
+              tema. Y no de la víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron
+              en la mente de mis compañeros:
             </p>
           </div>
         </ParallaxLayer>
         {/* PREGUNTAS ------------------------------------- */}
-        <ParallaxLayer
-          offset={7}
-          sticky={{ start: 7, end: 8 }}
-          className="preguntas-container"
-        >
+        <ParallaxLayer offset={7} sticky={{ start: 7, end: 8 }} className="preguntas-container">
           <div className="preguntas">
-            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: .1 }}>
+            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: 0.1 }}>
               <div className="pregunta-derecha">
                 <p>
                   ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
                 </p>
               </div>
             </Observador>
-            <Observador offset={.2} speed={0.5} sticky={{ start: .2, end: .3 }}>
+            <Observador offset={0.2} speed={0.5} sticky={{ start: 0.2, end: 0.3 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
                 </p>
               </div>
             </Observador>
-            <Observador offset={.2} speed={0.5} sticky={{ start: .2, end: .4 }}>
+            <Observador offset={0.2} speed={0.5} sticky={{ start: 0.2, end: 0.4 }}>
               <div className="pregunta-derecha">
-                <p>
-                  ¿Y qué hay del gobierno?
-                </p>
+                <p>¿Y qué hay del gobierno?</p>
               </div>
             </Observador>
-            <Observador offset={.3} speed={0.5} sticky={{ start: .3, end: .5 }}>
+            <Observador offset={0.3} speed={0.5} sticky={{ start: 0.3, end: 0.5 }}>
               <div className="pregunta-izquierda">
                 <p>
-                  ¿Cuántos estudiantes tienen <br />este tipo de pensamientos?
+                  ¿Cuántos estudiantes tienen <br />
+                  este tipo de pensamientos?
                 </p>
               </div>
             </Observador>
-            <Observador offset={.4} speed={0.5} sticky={{ start: .4, end: .6 }}>
+            <Observador offset={0.4} speed={0.5} sticky={{ start: 0.4, end: 0.6 }}>
               <div className="pregunta-derecha">
-                <p>
-                  ¿La mayoría están en este rango de edad?
-                </p>
+                <p>¿La mayoría están en este rango de edad?</p>
               </div>
             </Observador>
           </div>
         </ParallaxLayer>
         {/* HOMBRE COLGADO ESQUEMA ------------------------ */}
-        <ParallaxLayer
-          offset={10}
-          sticky={{ start: 10, end: 12 }}
-          speed={0.01}>
+        <ParallaxLayer offset={10} sticky={{ start: 10, end: 12 }} speed={0.01}>
           <div className="sujeto-principal">
             <center>
-              <img
-                src={sujetoPrincipalTop}
-                alt="Hombre Colgado"
-                style={{ height: "100vh", zIndex: "-1" }}
-              />
+              <img src={sujetoPrincipalTop} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
             </center>
             <div className="corazon">
               <img src={corazon} alt="Corazon" />
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={9}
-          sticky={{ start: 13, end: 16 }}
-          speed={0.01}>
+        <ParallaxLayer offset={9} sticky={{ start: 13, end: 16 }} speed={0.01}>
           <center>
-            <img
-              src={sujetoPrincipalBottom}
-              alt="Hombre Colgado"
-              style={{ height: "120vh", zIndex: "-1" }}
-            />
+            <img src={sujetoPrincipalBottom} alt="Hombre Colgado" style={{ height: "120vh", zIndex: "-1" }} />
           </center>
         </ParallaxLayer>
         {/* DATOS ----------------------------------------- */}
@@ -264,34 +226,19 @@ export default function App() {
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <div className="estado">
-            <h6>
-              Datos generales del estado
-            </h6>
+            <h6>Datos generales del estado</h6>
             <hr />
-            <p>
-              En las siguientes gráficas se presentan las categorías con los datos del estado de Guanajuato.
-            </p>
+            <p>En las siguientes gráficas se presentan las categorías con los datos del estado de Guanajuato.</p>
           </div>
         </ParallaxLayer>
         {/* MAPA ---------------------	*/}
-        <ParallaxLayer
-          offset={20}
-          sticky={{ start: 20, end: 21 }}
-          speed={0.5}
-          className="mapa-container"
-        >
+        <ParallaxLayer offset={20} sticky={{ start: 20, end: 21 }} speed={0.5} className="mapa-container">
           <div className="titulo-mapa">
-            <h6>
-              Mapa
-            </h6>
+            <h6>Mapa</h6>
           </div>
           <State />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={22}
-          speed={0.5}
-          sticky={{ start: 22, end: 22.5 }}
-          className="gradient">
+        <ParallaxLayer offset={22} speed={0.5} sticky={{ start: 22, end: 22.5 }} className="gradient">
           <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
@@ -303,31 +250,48 @@ export default function App() {
         >
           <Estadisticas />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={22}
-          speed={0.5}
-          sticky={{ start: 25, end: 25.5 }}
-          className="gradient2">
+        <ParallaxLayer offset={22} speed={0.5} sticky={{ start: 25, end: 25.5 }} className="gradient2">
           <div className="gradient2"></div>
         </ParallaxLayer>
         {/* CRÉDITOS ---------------------	*/}
-        <ParallaxLayer
-          offset={27}
-          speed={0.5}
-          sticky={{ start: 27, end: 28 }}
-          className="creditos-container"
-        >
-          <div className="creditos">
+        <ParallaxLayer offset={27} speed={0.5} sticky={{ start: 27, end: 28 }} className="dedicatoria-container">
+          <div className="dedicatoria">
             <p>
-              Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste. A los valientes, a sus seres queridos y a todos contribuyendo a la prevención del suicidio. Que inspire compasión y solidaridad, construyendo puentes hacia la esperanza y la curación en nuestra comunidad.
+              Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste.
+              A los valientes, a sus seres queridos y a todos contribuyendo a la prevención del suicidio. Que inspire
+              compasión y solidaridad, construyendo puentes hacia la esperanza y la curación en nuestra comunidad.
+              <br />
+              <br />
+              <strong style={{ color: "red" }}>Línea de la vida</strong>
+              <br />
+              <strong>Correo electrónico: </strong>lalineadelavida@salud.gob.mx
+              <br />
+              <strong>Teléfono: </strong>01 800 911 2000
             </p>
-            <h2>
-              Universidad de Guanajuato
-            </h2>
-            <img src={logoUG} alt="Universidad de Guanajuato" />
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={29} speed={0.5} sticky={{ start: 29, end: 30 }} className="creditos-parallax">
+          <div className="creditos-container">
+            <div className="creditos">
+              <h3>Desarrollado por:</h3>
+              <p>
+                Dr. Uriel Haile Hernández Belmonte
+                <br />
+                Durán Sierra Vanessa
+                <br />
+                Guzmán Molina Mónica
+                <br />
+                Rosales García Paulina Alejandra
+              </p>
+            </div>
+            <div className="logo-container">
+              <h2>Universidad de Guanajuato</h2>
+              <img src={logoUG} alt="Universidad de Guanajuato" />
+              <p>© 2023</p>
+            </div>
           </div>
         </ParallaxLayer>
       </Parallax>
-    </div >
+    </div>
   );
 }
