@@ -8,3 +8,17 @@
   fill: rgb(255, 145, 0);
   fill-opacity: 0.5;
 }
+
+/* ESTILOS PARA PANTALLAS GRANDES */
+@media screen and (min-width: 4000px) {
+  .path:hover {
+    font-size: 2rem;
+  }
+}
+
+/* ESTILOS PARA PANTALLAS PEQUEÑAS */
+@media screen and (max-width: 800px) and (min-width: 100px) {
+  .path:hover {
+    font-size: 2rem;
+  }
+}

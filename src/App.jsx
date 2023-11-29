@@ -2,7 +2,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
 import Estadisticas from "./components/estadisticas.jsx";
 import State from "./components/State.jsx";
-
 import Observador from "./components/observador.jsx";
 
 /* Estilos */
@@ -16,6 +15,7 @@ import cuerda from "./img/cuerda.png";
 import CuerdaExt from "./img/CuerdaExt.png";
 import CuerdaExt1 from "./img/CuerdaExt1.png";
 import pildoras from "./img/pildoras.png";
+import logoUG from "./img/UG.png";
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Parallax pages={25} style={{ top: "0", left: "0" }}>
+      <Parallax pages={29} style={{ top: "0", left: "0" }}>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -95,37 +95,41 @@ export default function App() {
           className="preguntas-container"
         >
           <div className="preguntas">
-            <Observador offset={7} speed={0.5} sticky={{ start: 7, end: 8 }}>
+            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: 1 }}>
               <div className="pregunta-derecha">
                 <p>
                   ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
                 </p>
               </div>
             </Observador>
-
-            <div className="pregunta-izquierda">
-              <p>
-                ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
-              </p>
-            </div>
-
-            <div className="pregunta-derecha">
-              <p>
-                ¿Y qué hay del gobierno?
-              </p>
-            </div>
-
-            <div className="pregunta-izquierda">
-              <p>
-                ¿Cuántos estudiantes tienen <br />este tipo de pensamientos?
-              </p>
-            </div>
-
-            <div className="pregunta-derecha">
-              <p>
-                ¿La mayoría están en este rango de edad?
-              </p>
-            </div>
+            <Observador offset={1} speed={0.5} sticky={{ start: 1, end: 2 }}>
+              <div className="pregunta-izquierda">
+                <p>
+                  ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
+                </p>
+              </div>
+            </Observador>
+            <Observador offset={2} speed={0.5} sticky={{ start: 2, end: 3 }}>
+              <div className="pregunta-derecha">
+                <p>
+                  ¿Y qué hay del gobierno?
+                </p>
+              </div>
+            </Observador>
+            <Observador offset={3} speed={0.5} sticky={{ start: 3, end: 4 }}>
+              <div className="pregunta-izquierda">
+                <p>
+                  ¿Cuántos estudiantes tienen <br />este tipo de pensamientos?
+                </p>
+              </div>
+            </Observador>
+            <Observador offset={4} speed={0.5} sticky={{ start: 4, end: 5 }}>
+              <div className="pregunta-derecha">
+                <p>
+                  ¿La mayoría están en este rango de edad?
+                </p>
+              </div>
+            </Observador>
           </div>
         </ParallaxLayer>
         {/* HOMBRE COLGADO ESQUEMA ------------------------ */}
@@ -134,7 +138,11 @@ export default function App() {
           sticky={{ start: 10, end: 12 }}
           speed={0.01}>
           <center>
-            <img src={sujetoPrincipalTop} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
+            <img
+              src={sujetoPrincipalTop}
+              alt="Hombre Colgado"
+              style={{ height: "100vh", zIndex: "-1" }}
+            />
           </center>
         </ParallaxLayer>
         <ParallaxLayer
@@ -142,7 +150,11 @@ export default function App() {
           sticky={{ start: 13, end: 16 }}
           speed={0.01}>
           <center>
-            <img src={sujetoPrincipalBottom} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
+            <img
+              src={sujetoPrincipalBottom}
+              alt="Hombre Colgado"
+              style={{ height: "120vh", zIndex: "-1" }}
+            />
           </center>
         </ParallaxLayer>
         {/* DATOS ----------------------------------------- */}
@@ -249,21 +261,23 @@ export default function App() {
         {/* MAPA ---------------------	*/}
         <ParallaxLayer
           offset={20}
-          sticky={{ start: 20, end: 22 }}
+          sticky={{ start: 20, end: 21 }}
           speed={0.5}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
-          }}
+          className="mapa-container"
         >
-          <div >
-            <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>
+          <div className="titulo-mapa">
+            <h6>
               Mapa
             </h6>
-            <hr />
-            <State />
           </div>
+          <State />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={22}
+          speed={0.5}
+          sticky={{ start: 22, end: 22.5 }}
+          className="gradient">
+          <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
@@ -273,6 +287,30 @@ export default function App() {
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={22}
+          speed={0.5}
+          sticky={{ start: 25, end: 25.5 }}
+          className="gradient2">
+          <div className="gradient2"></div>
+        </ParallaxLayer>
+        {/* CRÉDITOS ---------------------	*/}
+        <ParallaxLayer
+          offset={27}
+          speed={0.5}
+          sticky={{ start: 27, end: 28 }}
+          className="creditos-container"
+        >
+          <div className="creditos">
+            <p>
+              Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste. A los valientes, a sus seres queridos y a todos contribuyendo a la prevención del suicidio. Que inspire compasión y solidaridad, construyendo puentes hacia la esperanza y la curación en nuestra comunidad.
+            </p>
+            <h2>
+              Universidad de Guanajuato
+            </h2>
+            <img src={logoUG} alt="Universidad de Guanajuato" />
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div >

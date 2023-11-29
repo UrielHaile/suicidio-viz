@@ -4,3 +4,17 @@
   color: #fff;
   background-color: "#D37506";
 }
+
+/* ESTILOS PARA PANTALLAS GRANDES */
+@media screen and (min-width: 4000px) {
+  .map-canvas {
+    scale: 3.5;
+  }
+}
+
+/* ESTILOS PARA PANTALLAS PEQUEÑAS */
+@media screen and (max-width: 800px) and (min-width: 100px) {
+  .map-canvas {
+    scale: .7;
+  }
+}
