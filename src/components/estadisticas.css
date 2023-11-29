@@ -6,13 +6,13 @@
 
 .barra-busqueda {
     position: absolute;
-    top: 30px;
-    left: 100px;
+    top: 10%;
+    right: 10%;
 }
 
 #busqueda {
     width: 100%;
-    height: 30px;
+    height: 90%;
     padding: 10px;
 
     font-size: 18px;
@@ -23,8 +23,9 @@
 }
 
 .results-list {
-    width: 300px;
+    width: 17%;
     color: #000;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 8px #ddd;
@@ -34,8 +35,8 @@
     overflow-y: scroll;
 
     position: absolute;
-    top: 80px;
-    left: 100px;
+    top: 15%;
+    right: 100px;
 }
 
 .decoracion-top {
@@ -47,10 +48,15 @@
     right: 10px;
 }
 
+.result:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
 .titulo {
     position: absolute;
-    top: 120px;
-    left: 100px;
+    top: 7%;
+    left: 5%;
     text-align: left;
 }
 

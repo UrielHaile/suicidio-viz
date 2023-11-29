@@ -246,19 +246,10 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
+        {/* MAPA ---------------------	*/}
         <ParallaxLayer
           offset={20}
           sticky={{ start: 20, end: 22 }}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
-        >
-          <Estadisticas />
-        </ParallaxLayer>
-        {/* MAPA ---------------------	*/}
-        <ParallaxLayer
-          offset={23}
-          sticky={{ start: 23, end: 25 }}
           speed={0.5}
           style={{
             display: "flex",
@@ -267,9 +258,21 @@ export default function App() {
           }}
         >
           <div >
-            <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>Mapa</h6>
+            <h6 style={{ color: "white", fontSize: "4em", margin: "0%" }}>
+              Mapa
+            </h6>
+            <hr />
             <State />
           </div>
+        </ParallaxLayer>
+        {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
+        <ParallaxLayer
+          offset={23}
+          sticky={{ start: 23, end: 25 }}
+          speed={0.5}
+          style={{ ...alignCenter, justifyContent: "center" }}
+        >
+          <Estadisticas />
         </ParallaxLayer>
       </Parallax>
     </div >
