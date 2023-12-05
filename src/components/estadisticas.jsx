@@ -1,44 +1,31 @@
-import { SearchBar } from "./SearchBar";
-import "./estadisticas.css";
+// Estadisticas.jsx
 import { useState } from "react";
-import { SearchResultsList } from "./searchResultsList";
-import Visualizacion from "./visualizacion";
-
-// eslint-disable-next-line no-unused-vars
-// import * as d3 from "d3";
-// import { useMapTools } from "../hooks/useMapTools";
-
+import { SearchBar } from "./SearchBar.jsx";
+import { SearchResultsList } from "./searchResultsList.jsx";
+import Visualizacion from "./visualizacion.jsx";
+import "./estadisticas.css";
 
 export default function Estadisticas() {
   const [results, setResults] = useState([]);
-  
-  if (results.length) {
-    return  (
-    <div className="estadisticas">
-      <div>
-        <SearchBar setResults={setResults} />
-        {results && results.length > 0 && <SearchResultsList results={results} />}
-      </div>
-      <header className="titulo">
-        <h2>{results[0].name}</h2>
-        <h3>Número de suicidios {results[0].suicidios}</h3>
-      </header>
-      <Visualizacion cantidad={results[0].suicidios} />
-    </div>
-  );
-  }
+  const [selectedResult, setSelectedResult] = useState(null);
+
+  const hasResults = results.length > 0;
+  const municipio = selectedResult ? selectedResult.name : "Municipio";
+  const numeroSuicidios = selectedResult ? selectedResult.suicidios : 0;
+
+  const handleResultClick = (result) => {
+    setSelectedResult(result);
+  };
 
   return (
     <div className="estadisticas">
-      <div>
-        <SearchBar setResults={setResults} />
-        {results && results.length > 0 && <SearchResultsList results={results} />}
-      </div>
+      <SearchBar setResults={setResults} />
+      {hasResults && <SearchResultsList results={results} onResultClick={handleResultClick} />}
       <header className="titulo">
-        <h2>Municipio</h2>
-        <h3>Número de suicidios</h3>
+        <h2>{municipio}</h2>
+        <h3>Número de suicidios {numeroSuicidios}</h3>
       </header>
-      <Visualizacion cantidad={0} />
+      <Visualizacion cantidad={numeroSuicidios} />
     </div>
   );
 }

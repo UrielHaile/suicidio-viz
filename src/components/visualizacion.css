@@ -17,12 +17,17 @@
 
 #contenedor img {
     max-height: 20%;
-    max-width: 5%;
+    max-width: 4%;
 }
 
 /* ESTILOS PARA PANTALLAS PEQUEÑAS */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) and (min-width: 100px) {
     #contenedor {
-        transform: translate(-40%, -20%);
+        margin-left: 5%;
+    }
+
+    #contenedor img {
+        max-height: 20%;
+        max-width: 17%;
     }
 }

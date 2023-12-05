@@ -6,51 +6,83 @@
 
 .barra-busqueda {
     position: absolute;
-    top: 30px;
-    left: 100px;
+    top: 10%;
+    right: 10%;
 }
 
 #busqueda {
     width: 100%;
-    height: 30px;
+    height: 90%;
     padding: 10px;
 
-    font-size: 18px;
+    font-size: 2rem;
     border: none;
     outline: none;
     border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 .results-list {
-    width: 300px;
+    width: 17%;
     color: #000;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 8px #ddd;
+    align-items: center;
+    box-shadow: 20px 20px 20px #ddd;
     border-radius: 10px;
     margin-top: 1rem;
-    max-height: 300px;
+    max-height: 30%;
     overflow-y: scroll;
 
     position: absolute;
-    top: 80px;
-    left: 100px;
+    top: 15%;
+    right: 9%;
+
+    z-index: 1;
+
+    font-family: 'Roboto', sans-serif;
 }
 
-.decoracion-top {
-    background-color: #000;
-    width: 50%;
-    height: 8vh;
-    position: absolute;
-    top: 80px;
-    right: 10px;
+.results-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.results-list::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.results-list::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.result {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.result:last-child {
+    border-bottom: none;
+}
+
+.result:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.result:hover {
+    background-color: #ddd;
+    cursor: pointer;
 }
 
 .titulo {
     position: absolute;
-    top: 120px;
-    left: 100px;
+    top: 7%;
+    left: 5%;
     text-align: left;
 }
 
@@ -64,13 +96,45 @@
     font-size: 2rem;
 }
 
-@media screen and (max-width: 400px) {
-    .decoracion-top {
-        display: none;
+@media screen and (max-width: 800px) and (min-width: 100px) {
+    .barra-busqueda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        top: 3%;
+    }
+
+    #busqueda {
+        width: 80%;
+        font-size: 1.5rem;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        z-index: 0;
+    }
+
+    .results-list {
+        width: 80%;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 7%;
+        z-index: 2;
+
+        backdrop-filter: blur(5px);
+        background-color: #ffffff65;
     }
 }
 
-@media screen and (min-width: 4000px) {
+@media screen and (min-width: 2000px) {
     #busqueda {
         height: 100px;
         padding: 30px;
@@ -78,8 +142,8 @@
         border-radius: 50px;
     }
 
-    .titulo {
-        top: 250px;
+    .results-list {
+        font-size: 3rem;
     }
 
     .titulo h2 {

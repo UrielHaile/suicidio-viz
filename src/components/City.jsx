@@ -6,6 +6,7 @@ import {
 } from "../helpers/handleTooltip";
 import "./City.css";
 
+// eslint-disable-next-line react/prop-types
 export default function City({ path, tooltipData, suicides }) {
   const myColor = d3
     .scaleSequential()

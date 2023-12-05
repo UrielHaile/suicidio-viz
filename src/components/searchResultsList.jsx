@@ -1,15 +1,15 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from "react";
 
-export const SearchResultsList = ({ results }) => {
-  const SearchResult = ({ result }) => {
-    return <div>{result.name}</div>;
-  };
+const SearchResult = ({ result, onResultClick }) => (
+  <div className="result" onClick={() => onResultClick(result)}>{result.name}</div>
+);
+export const SearchResultsList = ({ results, onResultClick }) => (
+  <div className="results-list">
+    {results.map((result) => (
+      <SearchResult key={result.mun_code} result={result} onResultClick={onResultClick} />
+    ))}
+  </div>
+);
 
-  return (
-    <div className="results-list">
-      {results.map((result) => (
-        <SearchResult key={result.mun_code} result={result} />
-      ))}
-    </div>
-  );
-};
