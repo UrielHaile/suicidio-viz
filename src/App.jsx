@@ -79,13 +79,16 @@ export default function App() {
         >
           <div className="historia-parrafo">
             <p>
-              Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los pasillos
-              de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la información y
-              los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la directora de manera
-              oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó silencioso, gris y
-              sobrio. Realmente no sabías si se debía discutir, platicar, comentar o debatir sobre el tema. Y no de la
-              víctima en sí o del suceso, sino del acto de suicidarse. Algunas inquietudes se sembraron en la mente de mis
-              compañeros:
+              Hace un par de meses, tal vez hace ya un año, la noticia del
+    sucidio de una estudiante recorrió los pasillos de mi universidad. Como con
+    la mayoría de sucesos, uno se entera por medio de los rumores, la
+    información y los datos se transfiguran. Y nosotros, como estudiantes, nos
+    enteramos por medio de la directora de manera oficial, pasadas unas semanas.
+    El ambiente en los corredores universitarios se tornó silencioso, gris y
+    sobrio. Realmente no sabías si se debía discutir, platicar, comentar o
+    debatir sobre el tema. Y no de la víctima en sí o del suceso, sino del acto
+    de suicidarse. Algunas inquietudes se sembraron en la mente de mis    
+    compañeros:
             </p>
           </div>
         </ParallaxLayer>
