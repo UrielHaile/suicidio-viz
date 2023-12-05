@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { SearchBar } from "./SearchBar.jsx";
 import { SearchResultsList } from "./searchResultsList.jsx";
-import Visualizacion from "./visualizacion.jsx";
-import "./estadisticas.css";
+import Visualizacion from "./Visualizacion.jsx";
+import "./Estadisticas.css";
 
 export default function Estadisticas() {
   const [results, setResults] = useState([]);
