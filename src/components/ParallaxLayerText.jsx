@@ -6,11 +6,7 @@ export const ParallaxLayerText = () => {
   const alignCenter = { display: "flex", alignItems: "center" };
 
   return (
-    <ParallaxLayer
-      offset={0}
-      speed={0.5}
-      style={{ ...alignCenter }}
-    >
+    <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter }}>
       <div ref={elemento1} className={isIntersecting ? "blur-in frase-container " : "blur-out frase-container "}>
         <div className="frase">
           <p>

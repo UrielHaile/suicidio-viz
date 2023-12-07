@@ -62,7 +62,7 @@ export default function App() {
         <ParallaxLayer offset={4} sticky={{ start: 4, end: 6 }} className="historia">
           <div className="historia-parrafo">
             <p>
-              Hace un par de meses, tal vez hace ya un año, la noticia del sucidio de una estudiante recorrió los
+              Hace un par de meses, tal vez hace ya un año, la noticia del suicidio de una estudiante recorrió los
               pasillos de mi universidad. Como con la mayoría de sucesos, uno se entera por medio de los rumores, la
               información y los datos se transfiguran. Y nosotros, como estudiantes, nos enteramos por medio de la
               directora de manera oficial, pasadas unas semanas. El ambiente en los corredores universitarios se tornó
@@ -165,8 +165,7 @@ export default function App() {
           <div className="dato-izquierda" style={{ marginTop: "5%" }}>
             <h3>Escolaridad</h3>
             <p>
-              El ahorcamiento, la estrangulación y la sofocación es la manera más común de quitarse la vida en el
-              estado.
+              La mayoría de las personas que se suicidan en Guanajuato han cursado la primaria solamente.
             </p>
           </div>
         </ParallaxLayer>
@@ -203,7 +202,7 @@ export default function App() {
         >
           <div className="dato-derecha" style={{ marginTop: "20%" }}>
             <h3>Estado Civil</h3>
-            <p>De los veinticinco a los veintinueve está la mayor parte de víctimas del suicidio del estado.</p>
+            <p>Los solteros, seguidos de los casados son los grupos que tienen una mayor ocurrencia.</p>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
@@ -282,6 +281,10 @@ export default function App() {
                 Guzmán Molina Mónica
                 <br />
                 Rosales García Paulina Alejandra
+              </p>
+              <h3>Idea original</h3>
+              <p>
+                Armando Rojano Urízar 
               </p>
             </div>
             <div className="logo-container">

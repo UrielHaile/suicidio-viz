@@ -3,7 +3,9 @@
 import React from "react";
 
 const SearchResult = ({ result, onResultClick }) => (
-  <div className="result" onClick={() => onResultClick(result)}>{result.name}</div>
+  <div className="result" onClick={() => onResultClick(result)}>
+    {result.name}
+  </div>
 );
 export const SearchResultsList = ({ results, onResultClick }) => (
   <div className="results-list">
@@ -12,4 +14,3 @@ export const SearchResultsList = ({ results, onResultClick }) => (
     ))}
   </div>
 );
-
