@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
-import "./Visualizacion.css";
+import "./visualizacion.css";
 
 // Imágenes
 import p1 from "../img/p1.png";

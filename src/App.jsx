@@ -263,7 +263,8 @@ export default function App() {
               <br />
               <strong style={{ color: "red" }}>Línea de la vida</strong>
               <br />
-              <strong>Correo electrónico: </strong>lalineadelavida@salud.gob.mx
+              <strong>Correo electrónico: </strong>
+              lalineadelavida@salud.gob.mx
               <br />
               <strong>Teléfono: </strong>01 800 911 2000
             </p>
@@ -272,20 +273,28 @@ export default function App() {
         <ParallaxLayer offset={29} speed={0.5} sticky={{ start: 29, end: 30 }} className="creditos-parallax">
           <div className="creditos-container">
             <div className="creditos">
-              <h3>Desarrollado por:</h3>
-              <p>
-                Dr. Uriel Haile Hernández Belmonte
-                <br />
-                Durán Sierra Vanessa
-                <br />
-                Guzmán Molina Mónica
-                <br />
-                Rosales García Paulina Alejandra
-              </p>
-              <h3>Idea original</h3>
-              <p>
-                Armando Rojano Urízar 
-              </p>
+              <div className="nombres">
+                <h3>Desarrollado por:</h3>
+                <p>
+                  Durán Sierra Vanessa
+                  <br />
+                  Guzmán Molina Mónica
+                  <br />
+                  Rosales García Paulina Alejandra
+                  <br /> <br />
+                  <strong>Coordinador:</strong>
+                  <br />
+                  Dr. Uriel Haile Hernández Belmonte
+                  <br /> <br />
+                  <strong>Maqueta:</strong>
+                  <br />
+                  Rojano Urízar Armando
+                  <br /><br />
+                  <strong>¿Nos quieres ayudar a mejorar este proyecto?</strong>
+                  <br />
+                  Te invito a llenar la siguiente <a href="https://docs.google.com/forms/d/e/1FAIpQLSd76VJB8KKkeKuWplg623xHeGxkthUuaJNzjF1E10sJLr3m-w/viewform?usp=sf_link">encuesta</a>
+                </p>
+              </div>
             </div>
             <div className="logo-container">
               <h2>Universidad de Guanajuato</h2>

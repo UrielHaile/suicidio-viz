@@ -342,15 +342,29 @@ p {
 }
 
 .creditos h3 {
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   margin-bottom: 5%;
 }
 
 .creditos p {
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   font-style: none;
+}
+
+.creditos a {
+  color: red;
+  text-decoration: none;
+}
+
+.creditos a:hover {
+  text-decoration: underline;
+}
+
+.nombres {
+  height: 70%;
+  width: 90%;
 }
 
 .logo-container {
@@ -365,7 +379,7 @@ p {
 }
 
 .logo-container img {
-  height: 600px;
+  height: 30vh;
   margin: 5% 5% 5% 5%;
 }
 
@@ -468,6 +482,18 @@ p {
     font-size: 5rem;
   }
 
+  .creditos h3 {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .creditos p {
+    font-size: 4rem;
+    text-align: center;
+    font-style: none;
+  }
+
   .creditos img {
     height: 400px;
   }
@@ -564,6 +590,6 @@ p {
   }
 
   .logo-container img {
-    height: 200px;
+    height: 150px;
   }
 }
