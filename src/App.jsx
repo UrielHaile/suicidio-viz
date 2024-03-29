@@ -20,46 +20,48 @@ import logoUG from "./img/UG.png";
 
 export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
-
   return (
     <div className="App">
-      <Parallax pages={30} style={{ top: "0", left: "0" }}>
+      <Parallax pages={29} style={{ top: "0", left: "0" } }>
         {/* EXTENSIÓN CUERDA ------------------------- */}
-        <div>
+        <div style={{position:"relative", transform:"translateZ(0)"}}>
           <ParallaxLayer offset={0} speed={0.01}>
-            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "26%" }} />
+            <img src={CuerdaExt} className="ext-cuerda er1" style={{margin:"auto" ,position:"absolute" }} />
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.01}>
-            <img src={CuerdaExt1} className="ext-cuerda" style={{ marginLeft: "25%" }} />
+          <ParallaxLayer offset={0.99} speed={0.01}>
+            <img src={CuerdaExt1} className="ext-cuerda er2" style={{margin:"auto" ,position:"absolute" }} />
           </ParallaxLayer>
-          <ParallaxLayer offset={2} speed={0.01}>
-            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "24%" }} />
+          <ParallaxLayer offset={1.98} speed={0.01}>
+            <img src={CuerdaExt} className="ext-cuerda er3" style={{ margin:"auto" ,position:"absolute"}} />
           </ParallaxLayer>
-          <ParallaxLayer offset={3} speed={0.01}>
-            <img src={CuerdaExt1} className="ext-cuerda" style={{ marginLeft: "23%" }} />
+          <ParallaxLayer offset={2.97} speed={0.01}>
+            <img src={CuerdaExt1} className="ext-cuerda er4" style={{ margin:"auto" ,position:"absolute" }} />
           </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.01}>
-            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "22%" }} />
+          <ParallaxLayer offset={3.96} speed={0.01}>
+            <img src={CuerdaExt} className="ext-cuerda er5" style={{ margin:"auto" ,position:"absolute" }} />
+          </ParallaxLayer>
+          <ParallaxLayer offset={4.94} speed={0.01}>
+            <img src={CuerdaExt1} className="ext-cuerda er6" style={{ margin:"auto" ,position:"absolute"}} />
+          </ParallaxLayer>
+          <ParallaxLayer offset={5.95} sticky={{ start: 5.9215, end: 5.9216 }} className="cuerda-fin">
+            <img src={cuerda} className="fin-img er7" alt="Cuerda" style={{margin:"auto",position:"absolute"}}/>
           </ParallaxLayer>
         </div>
         {/* ALBERT CAMUS ------------------------------------ */}
         <ParallaxLayerText />
         {/* ESTADÍSTICA ------------------------------------- */}
-        <Observador offset={1} speed={0.5} sticky={{ start: 1, end: 3 }}>
+        <Observador offset={0.1} speed={0.5} sticky={{start:1, end:2}}>
           <div className="estadistica">
             <h1>493</h1>
           </div>
         </Observador>
-        <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }}>
+        <ParallaxLayer offset={0.5} speed={0.5} sticky={{start:1.7, end:2}}>
           <div className="estadistica">
             <h2>Suicidios</h2>
           </div>
         </ParallaxLayer>
         {/* HISTORIA -------------------------------------- */}
-        <ParallaxLayer offset={5} sticky={{ start: 5, end: 8 }} className="cuerda-fin">
-          <img src={cuerda} alt="Cuerda" />
-        </ParallaxLayer>
-        <ParallaxLayer offset={4} sticky={{ start: 4, end: 6 }} className="historia">
+        <ParallaxLayer offset={2.9} sticky={{ start:3, end: 4 }} className="historia">
           <div className="historia-parrafo">
             <p>
               Hace un par de meses, tal vez hace ya un año, la noticia del suicidio de una estudiante recorrió los
@@ -73,28 +75,28 @@ export default function App() {
           </div>
         </ParallaxLayer>
         {/* PREGUNTAS ------------------------------------- */}
-        <ParallaxLayer offset={7} sticky={{ start: 7, end: 8 }} className="preguntas-container">
+        <ParallaxLayer offset={5} sticky={{ start: 5, end: 6}} className="preguntas-container">
           <div className="preguntas">
-            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: 0.1 }}>
+            <Observador offset={0} speed={0.7} sticky={{ start: 0, end: 0.1}}>
               <div className="pregunta-derecha">
                 <p>
                   ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
                 </p>
               </div>
             </Observador>
-            <Observador offset={0.2} speed={0.5} sticky={{ start: 0.2, end: 0.3 }}>
+            <Observador offset={0.3} speed={0.5} sticky={{ start: 0.3, end: 0.4 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿La universidad puede aportar algo positivo <br /> para la prevención de este tipo de circunstancias?
                 </p>
               </div>
             </Observador>
-            <Observador offset={0.2} speed={0.5} sticky={{ start: 0.2, end: 0.4 }}>
+            <Observador offset={0.5} speed={0.5} sticky={{ start: 0.6, end: 0.7 }}>
               <div className="pregunta-derecha">
                 <p>¿Y qué hay del gobierno?</p>
               </div>
             </Observador>
-            <Observador offset={0.3} speed={0.5} sticky={{ start: 0.3, end: 0.5 }}>
+            <Observador offset={0.7} speed={0.5} sticky={{ start: 0.7, end: 0.8 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿Cuántos estudiantes tienen <br />
@@ -102,7 +104,7 @@ export default function App() {
                 </p>
               </div>
             </Observador>
-            <Observador offset={0.4} speed={0.5} sticky={{ start: 0.4, end: 0.6 }}>
+            <Observador offset={0.9} speed={0.5} sticky={{ start: 0.9, end: 1 }}>
               <div className="pregunta-derecha">
                 <p>¿La mayoría están en este rango de edad?</p>
               </div>
@@ -110,7 +112,7 @@ export default function App() {
           </div>
         </ParallaxLayer>
         {/* HOMBRE COLGADO ESQUEMA ------------------------ */}
-        <ParallaxLayer offset={10} sticky={{ start: 10, end: 12 }} speed={0.01}>
+        <ParallaxLayer offset={6.5} sticky={{ start: 7.5, end: 13 }} speed={0.01}>
           <div className="sujeto-principal">
             <center>
               <img src={sujetoPrincipalTop} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
@@ -120,15 +122,17 @@ export default function App() {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} sticky={{ start: 13, end: 16 }} speed={0.01}>
+        <ParallaxLayer offset={14.5} sticky={{ start: 14, end: 16 }} speed={0.01}>
           <center>
-            <img src={sujetoPrincipalBottom} alt="Hombre Colgado" style={{ height: "120vh", zIndex: "-1" }} />
+          <div className="container-bottom-man">
+            <img src={sujetoPrincipalBottom} alt="Hombre Colgado" className="bottomMan" style={{ height: "120vh", zIndex: "-1" }} />
+          </div>
           </center>
         </ParallaxLayer>
         {/* DATOS ----------------------------------------- */}
         <ParallaxLayer
-          offset={10}
-          sticky={{ start: 10, end: 11 }}
+          offset={5}
+          sticky={{ start: 8.5, end: 9 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
@@ -156,8 +160,8 @@ export default function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={11}
-          sticky={{ start: 11, end: 12 }}
+          offset={6}
+          sticky={{ start: 10, end: 12 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-start" }}
           id="datos"
@@ -170,8 +174,8 @@ export default function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={12}
-          sticky={{ start: 12, end: 13 }}
+          offset={9}
+          sticky={{ start: 11, end: 12 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
@@ -182,7 +186,7 @@ export default function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={13}
+          offset={10}
           sticky={{ start: 13, end: 14 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-start" }}
@@ -194,7 +198,7 @@ export default function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={14}
+          offset={11}
           sticky={{ start: 14, end: 15 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-end" }}
@@ -206,7 +210,7 @@ export default function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={15}
+          offset={12}
           sticky={{ start: 15, end: 16 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-start" }}
@@ -219,8 +223,8 @@ export default function App() {
         </ParallaxLayer>
         {/* DATOS GENERALES DEL ESTADO --------------------- */}
         <ParallaxLayer
-          offset={16}
-          sticky={{ start: 17, end: 19 }}
+          offset={13}
+          sticky={{ start: 17, end: 17.5 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
@@ -231,29 +235,29 @@ export default function App() {
           </div>
         </ParallaxLayer>
         {/* MAPA ---------------------	*/}
-        <ParallaxLayer offset={20} sticky={{ start: 20, end: 21 }} speed={0.5} className="mapa-container">
+        <ParallaxLayer offset={14} sticky={{ start: 18.5, end:19 }} speed={0.5} className="mapa-container">
           <div className="titulo-mapa">
             <h6>Mapa</h6>
           </div>
           <State />
         </ParallaxLayer>
-        <ParallaxLayer offset={22} speed={0.5} sticky={{ start: 22, end: 22.5 }} className="gradient">
+        <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient">
           <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
-          offset={23}
-          sticky={{ start: 23, end: 25 }}
+          offset={22}
+          sticky={{ start: 22, end: 23 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
         </ParallaxLayer>
-        <ParallaxLayer offset={22} speed={0.5} sticky={{ start: 25, end: 25.5 }} className="gradient2">
+        <ParallaxLayer offset={23} speed={0.5} sticky={{ start: 23, end: 24 }} className="gradient2">
           <div className="gradient2"></div>
         </ParallaxLayer>
         {/* CRÉDITOS ---------------------	*/}
-        <ParallaxLayer offset={27} speed={0.5} sticky={{ start: 27, end: 28 }} className="dedicatoria-container">
+        <ParallaxLayer offset={24} speed={0.5} sticky={{ start: 25, end: 26}} className="dedicatoria-container">
           <div className="dedicatoria">
             <p>
               Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste.
@@ -270,7 +274,7 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={29} speed={0.5} sticky={{ start: 29, end: 30 }} className="creditos-parallax">
+        <ParallaxLayer offset={25} speed={0.5} sticky={{ start: 27, end: 27.5}} className="creditos-parallax">
           <div className="creditos-container">
             <div className="creditos">
               <div className="nombres">
