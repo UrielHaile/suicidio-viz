@@ -27,10 +27,10 @@ export default function App() {
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div>
           <ParallaxLayer offset={0} speed={0.01}>
-            <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "26%" }} />
+            <img src={CuerdaExt} className="ext-cuerda" style={{ position:"absolute",marginLeft: "26%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.01}>
-            <img src={CuerdaExt1} className="ext-cuerda" style={{ marginLeft: "25%" }} />
+            <img src={CuerdaExt} className="ext-cuerda" style={{position:"absolute", marginLeft: "25%" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.01}>
             <img src={CuerdaExt} className="ext-cuerda" style={{ marginLeft: "24%" }} />
@@ -45,21 +45,21 @@ export default function App() {
         {/* ALBERT CAMUS ------------------------------------ */}
         <ParallaxLayerText />
         {/* ESTADÍSTICA ------------------------------------- */}
-        <Observador offset={1} speed={0.5} sticky={{ start: 1, end: 3 }}>
+        <Observador offset={5} speed={0.5} sticky={{ start: 1, end: 3 }}>
           <div className="estadistica">
             <h1>493</h1>
           </div>
         </Observador>
-        <ParallaxLayer offset={1} speed={0.1} sticky={{ start: 2, end: 3 }}>
+        <ParallaxLayer offset={6} speed={0.1} sticky={{ start: 2, end: 3 }}>
           <div className="estadistica">
             <h2>Suicidios</h2>
           </div>
         </ParallaxLayer>
         {/* HISTORIA -------------------------------------- */}
-        <ParallaxLayer offset={5} sticky={{ start: 5, end: 8 }} className="cuerda-fin">
+        <ParallaxLayer offset={8} sticky={{ start: 5, end: 9 }} className="cuerda-fin">
           <img src={cuerda} alt="Cuerda" />
         </ParallaxLayer>
-        <ParallaxLayer offset={4} sticky={{ start: 4, end: 6 }} className="historia">
+        <ParallaxLayer offset={9} sticky={{ start: 4, end: 6 }} className="historia">
           <div className="historia-parrafo">
             <p>
               Hace un par de meses, tal vez hace ya un año, la noticia del suicidio de una estudiante recorrió los
@@ -73,9 +73,9 @@ export default function App() {
           </div>
         </ParallaxLayer>
         {/* PREGUNTAS ------------------------------------- */}
-        <ParallaxLayer offset={7} sticky={{ start: 7, end: 8 }} className="preguntas-container">
+        <ParallaxLayer offset={9} sticky={{ start: 8, end: 9 }} className="preguntas-container">
           <div className="preguntas">
-            <Observador offset={0} speed={0.5} sticky={{ start: 0, end: 0.1 }}>
+            <Observador offset={0} speed={0.7} sticky={{ start: 0, end: 0.1}}>
               <div className="pregunta-derecha">
                 <p>
                   ¿En qué situación habrá estado la <br /> compañera para tomar tal decisión?
@@ -89,12 +89,12 @@ export default function App() {
                 </p>
               </div>
             </Observador>
-            <Observador offset={0.2} speed={0.5} sticky={{ start: 0.2, end: 0.4 }}>
+            <Observador offset={0.4} speed={0.5} sticky={{ start: 0.4, end: 0.5 }}>
               <div className="pregunta-derecha">
                 <p>¿Y qué hay del gobierno?</p>
               </div>
             </Observador>
-            <Observador offset={0.3} speed={0.5} sticky={{ start: 0.3, end: 0.5 }}>
+            <Observador offset={0.6} speed={0.5} sticky={{ start: 0.6, end: 0.7 }}>
               <div className="pregunta-izquierda">
                 <p>
                   ¿Cuántos estudiantes tienen <br />
@@ -102,7 +102,7 @@ export default function App() {
                 </p>
               </div>
             </Observador>
-            <Observador offset={0.4} speed={0.5} sticky={{ start: 0.4, end: 0.6 }}>
+            <Observador offset={0.8} speed={0.5} sticky={{ start: 0.8, end: 0.9 }}>
               <div className="pregunta-derecha">
                 <p>¿La mayoría están en este rango de edad?</p>
               </div>
@@ -110,7 +110,7 @@ export default function App() {
           </div>
         </ParallaxLayer>
         {/* HOMBRE COLGADO ESQUEMA ------------------------ */}
-        <ParallaxLayer offset={10} sticky={{ start: 10, end: 12 }} speed={0.01}>
+        <ParallaxLayer offset={10} sticky={{ start: 10, end: 13 }} speed={0.01}>
           <div className="sujeto-principal">
             <center>
               <img src={sujetoPrincipalTop} alt="Hombre Colgado" style={{ height: "100vh", zIndex: "-1" }} />
@@ -120,15 +120,15 @@ export default function App() {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} sticky={{ start: 13, end: 16 }} speed={0.01}>
+        <ParallaxLayer offset={14} sticky={{ start: 14, end: 18 }} speed={0.01}>
           <center>
             <img src={sujetoPrincipalBottom} alt="Hombre Colgado" style={{ height: "120vh", zIndex: "-1" }} />
           </center>
         </ParallaxLayer>
         {/* DATOS ----------------------------------------- */}
         <ParallaxLayer
-          offset={10}
-          sticky={{ start: 10, end: 11 }}
+          offset={19}
+          sticky={{ start: 19, end: 23 }}
           speed={0.5}
           style={{ display: "flex", justifyContent: "flex-end" }}
           id="datos"
