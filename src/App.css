@@ -568,6 +568,7 @@ p {
   .er6{left:3vw}
   .er7{left:8vw;}
 }
+
 @media screen and (max-width: 800px) and (min-width: 100px) and (min-height:601px) {
   .frase-container p {
     font-size: 6vw;
