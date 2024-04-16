@@ -12,9 +12,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
-    permissions:
-      pages: write      # to deploy to Pages
-    
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
