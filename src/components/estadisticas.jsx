@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SearchBar } from "./SearchBar.jsx";
 import { SearchResultsList } from "./searchResultsList.jsx";
 import Visualizacion from "./visualizacion.jsx";
-import "./Estadisticas.css";
+import "./estadisticas.css";
 
 export default function Estadisticas() {
   const [results, setResults] = useState([]);
