@@ -23,13 +23,16 @@ export const SearchBar = ({ setResults }) => {
   };
 
   return (
+    
     <div className="barra-busqueda">
+
       <input
         type="text"
-        placeholder="🔎 Escriba un municipio..."
+        placeholder=" Escriba un municipio..."
         value={busqueda}
         onChange={(e) => handleChange(e.target.value)}
         id="busqueda"
+        className="busqueda-lupa"
       />
     </div>
   );
