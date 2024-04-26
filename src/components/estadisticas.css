@@ -65,7 +65,9 @@
     text-align: center;
     border-bottom: 2px solid #ddd;
 }
-
+.result-hide{
+    display: none;
+}
 .result:last-child {
     border-bottom: none;
 }
