@@ -22,7 +22,7 @@ export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
   return (
     <div className="App">
-      <Parallax pages={29} style={{ top: "0", left: "0" } }>
+      <Parallax pages={26} style={{ top: "0", left: "0" } }>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div style={{position:"relative", transform:"translateZ(0)"}}>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -241,23 +241,23 @@ export default function App() {
           </div>
           <State />
         </ParallaxLayer>
-        <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient">
+     <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 22 }} className="gradient2">
+          <div className="gradient2"></div>
+     </ParallaxLayer>
+        <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 22 }} className="gradient">
           <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
-          offset={22}
-          sticky={{ start: 22, end: 23 }}
+          offset={20}
+          sticky={{ start: 20, end: 22 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
         </ParallaxLayer>
-     <ParallaxLayer offset={23} speed={0.5} sticky={{ start: 24, end: 25 }} className="gradient2">
-          <div className="gradient2"></div>
-     </ParallaxLayer>
         {/* CRÉDITOS ---------------------	*/}
-        <ParallaxLayer offset={24} speed={0.5} sticky={{ start: 26, end: 27}} className="dedicatoria-container">
+        <ParallaxLayer offset={23} speed={0.5} sticky={{ start: 24,end: 24}} className="dedicatoria-container">
           <div className="dedicatoria">
             <p>
               Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste.
@@ -274,7 +274,7 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={25} speed={0.5} sticky={{ start: 28, end: 28.5}} className="creditos-parallax">
+        <ParallaxLayer offset={25} speed={0.5} sticky={{ start: 25, end: 25.5}} className="creditos-parallax">
           <div className="creditos-container">
             <div className="creditos">
               <div className="nombres">
