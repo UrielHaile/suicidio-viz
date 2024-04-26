@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SearchBar } from "./SearchBar.jsx";
 import { SearchResultsList } from "./searchResultsList.jsx";
 import Visualizacion from "./visualizacion.jsx";
-import "./estadisticas.css";
+import "./Estadisticas.css";
 
 export default function Estadisticas() {
   const [results, setResults] = useState([]);
@@ -18,7 +18,7 @@ export default function Estadisticas() {
   };
 
   return (
-    <div className="estadisticas">
+    <div className="estadisticas" id="result">
       <SearchBar setResults={setResults} />
       {hasResults && <SearchResultsList results={results} onResultClick={handleResultClick} />}
       <header className="titulo">
