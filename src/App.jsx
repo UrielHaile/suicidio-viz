@@ -241,16 +241,16 @@ export default function App() {
           </div>
           <State />
         </ParallaxLayer>
-     <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 22 }} className="gradient2">
+     <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient2">
           <div className="gradient2"></div>
      </ParallaxLayer>
-        <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 22 }} className="gradient">
+        <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient">
           <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
           offset={20}
-          sticky={{ start: 20, end: 22 }}
+          sticky={{ start: 20, end: 21 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
