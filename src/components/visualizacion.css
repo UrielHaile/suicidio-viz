@@ -16,18 +16,19 @@
 }
 
 #contenedor img {
-    max-height: 20%;
-    max-width: 3%;
+    max-height: 10%;
+    max-width: 2%;
 }
 
 /* ESTILOS PARA PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 800px) and (min-width: 100px) {
     #contenedor {
-        margin-left: 5%;
+        margin-top: 5%;
+        margin-left: 10%
     }
 
     #contenedor img {
-        max-height: 10%;
-        max-width: 9%;
+        max-height: 6%;
+        max-width: 7%;
     }
 }

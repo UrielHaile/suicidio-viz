@@ -1,14 +1,14 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { ParallaxLayerText } from "./components/ParallaxLayerText.jsx";
-import Estadisticas from "./components/estadisticas.jsx";
-import State from "./components/State.jsx";
-import Observador from "./components/observador.jsx";
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { ParallaxLayerText } from './components/ParallaxLayerText.jsx'
+import Estadisticas from './components/estadisticas.jsx'
+import State from './components/State.jsx'
+import Observador from './components/observador.jsx'
 
 /* Estilos */
-import "./App.css";
+import './App.css'
 
 /* Imagenes */
-import sujetoPrincipalTop from "./img/sujetoPrincipalTop.png";
+import sujetoPrincipalTop from './img/sujetoPrincipalTop.png'
 import sujetoPrincipalBottom from "./img/sujetoPrincipalBottom.png";
 import corazon from "./img/KokoroR.png";
 import bala from "./img/bala.png";
@@ -22,7 +22,7 @@ export default function App() {
   const alignCenter = { display: "flex", alignItems: "center" };
   return (
     <div className="App">
-      <Parallax pages={29} style={{ top: "0", left: "0" } }>
+      <Parallax pages={26} style={{ top: "0", left: "0" } }>
         {/* EXTENSIÓN CUERDA ------------------------- */}
         <div style={{position:"relative", transform:"translateZ(0)"}}>
           <ParallaxLayer offset={0} speed={0.01}>
@@ -241,23 +241,23 @@ export default function App() {
           </div>
           <State />
         </ParallaxLayer>
+     <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient2">
+          <div className="gradient2"></div>
+     </ParallaxLayer>
         <ParallaxLayer offset={21} speed={0.5} sticky={{ start: 20, end: 21 }} className="gradient">
           <div className="gradient"></div>
         </ParallaxLayer>
         {/* VISUALIZACIÓN DE ESTADO ---------------------	*/}
         <ParallaxLayer
-          offset={22}
-          sticky={{ start: 22, end: 23 }}
+          offset={20}
+          sticky={{ start: 20, end: 21 }}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <Estadisticas />
         </ParallaxLayer>
-        <ParallaxLayer offset={23} speed={0.5} sticky={{ start: 23, end: 24 }} className="gradient2">
-          <div className="gradient2"></div>
-        </ParallaxLayer>
         {/* CRÉDITOS ---------------------	*/}
-        <ParallaxLayer offset={24} speed={0.5} sticky={{ start: 25, end: 26}} className="dedicatoria-container">
+        <ParallaxLayer offset={23} speed={0.5} sticky={{ start: 24,end: 24}} className="dedicatoria-container">
           <div className="dedicatoria">
             <p>
               Dedicamos este proyecto a quienes luchan contra la desesperación, recordándoles que la esperanza persiste.
@@ -274,7 +274,7 @@ export default function App() {
             </p>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={25} speed={0.5} sticky={{ start: 27, end: 27.5}} className="creditos-parallax">
+        <ParallaxLayer offset={25} speed={0.5} sticky={{ start: 25, end: 25.5}} className="creditos-parallax">
           <div className="creditos-container">
             <div className="creditos">
               <div className="nombres">
@@ -285,7 +285,8 @@ export default function App() {
                   Guzmán Molina Mónica
                   <br />
                   Rosales García Paulina Alejandra
-                  <br /> <br />
+                  <br />
+                  Rodríguez González José Adrián<br/> <br />
                   <strong>Coordinador:</strong>
                   <br />
                   Dr. Uriel Haile Hernández Belmonte
@@ -309,5 +310,6 @@ export default function App() {
         </ParallaxLayer>
       </Parallax>
     </div>
+    
   );
 }
