@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { node } from "prop-types";
 import React from "react";
 
 const SearchResult = ({ result, onResultClick }) => (
@@ -15,7 +14,6 @@ const SearchResult = ({ result, onResultClick }) => (
 );
 
 export const SearchResultsList = ({ results, onResultClick }) => (
-
   <div className="results-list" >
     {results.map((result) => (
       <SearchResult key={result.mun_code} result={result} onResultClick={onResultClick} />
