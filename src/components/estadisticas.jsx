@@ -18,7 +18,7 @@ export default function Estadisticas() {
   };
 
   return (
-    <div className="estadisticas">
+    <div className="estadisticas" id="result">
       <SearchBar setResults={setResults} />
       {hasResults && <SearchResultsList results={results} onResultClick={handleResultClick} />}
       <header className="titulo">
